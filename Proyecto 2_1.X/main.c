@@ -42,21 +42,40 @@
 #include "setupPWM.h"
 
 #define _XTAL_FREQ 1000000
-#define valTMR0 246
+#define valTMR0 100
 #define PR2PWM 254
 void modomanual(void);
 void setup(void);
+void setupTMR0(void);
+void hightime(int tdelay);
 unsigned int mapeo(int valor, int inmin, int inmax, int outmin, int outmax);
 
 unsigned int vPWM;
 unsigned int vPWMl;
 unsigned int vPWMh;
+unsigned int HIGHpulse0;
+unsigned int HIGHpulse1;
+int cont;
 
+void __interrupt() isr (void){
+    if (INTCONbits.T0IF){
+        INTCONbits.T0IF = 0;
+        TMR0 = valTMR0;
+        PORTCbits.RC0 = 1;
+        hightime(HIGHpulse0);
+        PORTCbits.RC0 = 0;
+        PORTCbits.RC3 = 1;
+        hightime(HIGHpulse1);
+        PORTCbits.RC3 = 0;
+        
+    }
+}
 void main(void) {
     setup();
     setupINTOSC(4);     // Oscilador a 1 MHz
     setup_ADC();
     setupPWM();
+    setupTMR0();
     while(1){
         modomanual();        
         __delay_ms(1);
@@ -72,10 +91,29 @@ void setup(void){
     PORTD = 0;
 }
 
+void setupTMR0(void){
+    INTCONbits.GIE = 1;         // Habilitar interrupciones globales
+    INTCONbits.T0IE = 1;        // Habilitar interrupción de TMR0
+    INTCONbits.T0IF = 0;        // Desactivar la bandera de TMR0
+    
+    OPTION_REGbits.T0CS = 0;    // Fosc/4
+    OPTION_REGbits.PSA = 0;     // Prescaler para TMR0
+    OPTION_REGbits.PS = 0b100;  // Prescaler 1:4
+    TMR0 = valTMR0;                   // Valor inicial del TMR0
+    cont = 0;
+}
+
 unsigned int mapeo(int valor, int inmin, int inmax, int outmin,int outmax){
     unsigned int resultado;
     resultado = (((outmax-outmin)*(valor-inmin)/(inmax)) + outmin);
     return resultado;
+}
+
+void hightime(int tdelay){
+    while (tdelay > 0){
+        __delay_us(50);
+        tdelay = tdelay - 1;
+    } 
 }
 
 void modomanual(void){
@@ -114,7 +152,22 @@ void modomanual(void){
     CCP2CONbits.DC2B0 = vPWMl & 0x01;
     CCP2CONbits.DC2B1 = ((vPWMl & 0x02) >> 1);
     // Carga los bits altos a CCPR2L
-    CCPR2L = vPWMh;
-    __delay_ms(10);    
+    CCPR2L = vPWMh;  
+    
+    // Cambia a canal analógico 2
+    ADCON0bits.CHS = 0b0010;
+    __delay_us(100);
+    ADCON0bits.GO = 1;
+    while (ADCON0bits.GO == 1); // Revisa si ya terminó la conversión ADC
+    ADIF = 0; 
+    HIGHpulse0 = mapeo(ADRESH, 0, 255, 7, 17);
+    
+     // Cambia a canal analógico 3
+    ADCON0bits.CHS = 0b0011;
+    __delay_us(100);
+    ADCON0bits.GO = 1;
+    while (ADCON0bits.GO == 1); // Revisa si ya terminó la conversión ADC
+    ADIF = 0; 
+    HIGHpulse1 = mapeo(ADRESH, 0, 255, 7, 17);
         
 }

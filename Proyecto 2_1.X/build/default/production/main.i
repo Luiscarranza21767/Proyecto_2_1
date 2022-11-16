@@ -2701,17 +2701,36 @@ void setupPWM(void);
 
 void modomanual(void);
 void setup(void);
+void setupTMR0(void);
+void hightime(int tdelay);
 unsigned int mapeo(int valor, int inmin, int inmax, int outmin, int outmax);
 
 unsigned int vPWM;
 unsigned int vPWMl;
 unsigned int vPWMh;
+unsigned int HIGHpulse0;
+unsigned int HIGHpulse1;
+int cont;
 
+void __attribute__((picinterrupt(("")))) isr (void){
+    if (INTCONbits.T0IF){
+        INTCONbits.T0IF = 0;
+        TMR0 = 100;
+        PORTCbits.RC0 = 1;
+        hightime(HIGHpulse0);
+        PORTCbits.RC0 = 0;
+        PORTCbits.RC3 = 1;
+        hightime(HIGHpulse1);
+        PORTCbits.RC3 = 0;
+
+    }
+}
 void main(void) {
     setup();
     setupINTOSC(4);
     setup_ADC();
     setupPWM();
+    setupTMR0();
     while(1){
         modomanual();
         _delay((unsigned long)((1)*(1000000/4000.0)));
@@ -2727,10 +2746,29 @@ void setup(void){
     PORTD = 0;
 }
 
+void setupTMR0(void){
+    INTCONbits.GIE = 1;
+    INTCONbits.T0IE = 1;
+    INTCONbits.T0IF = 0;
+
+    OPTION_REGbits.T0CS = 0;
+    OPTION_REGbits.PSA = 0;
+    OPTION_REGbits.PS = 0b100;
+    TMR0 = 100;
+    cont = 0;
+}
+
 unsigned int mapeo(int valor, int inmin, int inmax, int outmin,int outmax){
     unsigned int resultado;
     resultado = (((outmax-outmin)*(valor-inmin)/(inmax)) + outmin);
     return resultado;
+}
+
+void hightime(int tdelay){
+    while (tdelay > 0){
+        _delay((unsigned long)((50)*(1000000/4000000.0)));
+        tdelay = tdelay - 1;
+    }
 }
 
 void modomanual(void){
@@ -2770,6 +2808,21 @@ void modomanual(void){
     CCP2CONbits.DC2B1 = ((vPWMl & 0x02) >> 1);
 
     CCPR2L = vPWMh;
-    _delay((unsigned long)((10)*(1000000/4000.0)));
+
+
+    ADCON0bits.CHS = 0b0010;
+    _delay((unsigned long)((100)*(1000000/4000000.0)));
+    ADCON0bits.GO = 1;
+    while (ADCON0bits.GO == 1);
+    ADIF = 0;
+    HIGHpulse0 = mapeo(ADRESH, 0, 255, 7, 17);
+
+
+    ADCON0bits.CHS = 0b0011;
+    _delay((unsigned long)((100)*(1000000/4000000.0)));
+    ADCON0bits.GO = 1;
+    while (ADCON0bits.GO == 1);
+    ADIF = 0;
+    HIGHpulse1 = mapeo(ADRESH, 0, 255, 7, 17);
 
 }
