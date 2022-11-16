@@ -48,14 +48,21 @@ void modomanual(void);
 void setup(void);
 void setupTMR0(void);
 void hightime(int tdelay);
+void setup_portb(void);
+void write_EEPROM(uint8_t address, uint8_t data);
 unsigned int mapeo(int valor, int inmin, int inmax, int outmin, int outmax);
+uint8_t read_EEPROM(uint8_t address);
 
-unsigned int vPWM;
+unsigned int v1PWM;
+unsigned int v2PWM;
 unsigned int vPWMl;
 unsigned int vPWMh;
 unsigned int HIGHpulse0;
 unsigned int HIGHpulse1;
 int cont;
+int modo;
+int pos;
+int B4Flag;
 
 void __interrupt() isr (void){
     if (INTCONbits.T0IF){
@@ -69,6 +76,41 @@ void __interrupt() isr (void){
         PORTCbits.RC3 = 0;
         
     }
+    if (INTCONbits.RBIF){             // Revisa si hay interrupción del puerto B
+        if (PORTBbits.RB7 == 0)     // Si hay revisa si se presionó RB6
+        {
+            while(PORTBbits.RB7 == 0);
+            if (modo < 1){
+                modo = modo + 1;
+            }
+            else {
+                modo = 0;
+            }
+        }
+        if(PORTBbits.RB6 == 0){
+            while(PORTBbits.RB6 == 0);
+            if (pos < 4){
+                pos = pos +1;
+            }
+            else {
+                pos = 1;
+            }
+        }
+        if(PORTBbits.RB5 == 0){
+            while(PORTBbits.RB5 == 0);
+            if (pos > 1){
+                pos = pos - 1;
+            }
+            else {
+                pos = 4;
+            }
+        }
+        if(PORTBbits.RB4 == 0){
+            while(PORTBbits.RB4 == 0);
+            B4Flag = 1;
+        }
+        INTCONbits.RBIF = 0;  
+    }   
 }
 void main(void) {
     setup();
@@ -76,19 +118,72 @@ void main(void) {
     setup_ADC();
     setupPWM();
     setupTMR0();
+    setup_portb();
+    pos = 1;
+    B4Flag = 0;
     while(1){
-        modomanual();        
-        __delay_ms(1);
+        if(modo == 0){
+            modomanual();  
+            PORTD = pos;
+            if (B4Flag == 1){
+                B4Flag = 0;
+                int addr;
+                if (pos == 1){
+                    addr = 0;}
+                else if (pos == 2){
+                    addr = 4;}
+                else if (pos == 3){
+                    addr = 8;}
+                else if (pos == 4){
+                    addr = 12;}
+                write_EEPROM(addr, v1PWM);
+                write_EEPROM((addr + 1), v2PWM);
+                write_EEPROM((addr + 2), HIGHpulse0);
+                write_EEPROM((addr + 3), HIGHpulse1);
+            }
+            __delay_ms(1);
+        }
+        else if (modo == 1){
+            if (B4Flag == 1){
+                B4Flag = 0;
+                int addr;
+                if (pos == 1){
+                    addr = 0;}
+                else if (pos == 2){
+                    addr = 4;}
+                else if (pos == 3){
+                    addr = 8;}
+                else if (pos == 4){
+                    addr = 12;}
+                v1PWM = read_EEPROM(addr);
+                v2PWM = read_EEPROM((addr+1));
+                HIGHpulse0 = read_EEPROM((addr+2));
+                HIGHpulse1 = read_EEPROM((addr+3));                
+            }
+            modomanual();
+            PORTD = pos;
+            __delay_ms(1);
+        }
+        
     }
 }
 
 void setup(void){
     ANSELH = 0;
     TRISB = 0;
-    TRISC = 0; 
+    TRISC = 0b10000000; 
     TRISD = 0;
     PORTC = 0;
     PORTD = 0;
+}
+
+void setup_portb(void){
+    TRISB = 0b11110000;
+    INTCONbits.RBIE = 1;    // Habilita interrupción del puerto B
+    INTCONbits.RBIF = 0;    // Apaga la bandera de interrupción del puerto B
+    IOCB = 0b11110000;      // Habilita la interrupción en cambio
+    WPUB = 0b11110000;      // Habilita el Weak Pull-Up en el puerto B
+    OPTION_REGbits.nRBPU = 0;   // Deshabilita el bit de RBPU
 }
 
 void setupTMR0(void){
@@ -98,7 +193,7 @@ void setupTMR0(void){
     
     OPTION_REGbits.T0CS = 0;    // Fosc/4
     OPTION_REGbits.PSA = 0;     // Prescaler para TMR0
-    OPTION_REGbits.PS = 0b100;  // Prescaler 1:4
+    OPTION_REGbits.PS = 0b100;  // Prescaler 1:32
     TMR0 = valTMR0;                   // Valor inicial del TMR0
     cont = 0;
 }
@@ -116,7 +211,31 @@ void hightime(int tdelay){
     } 
 }
 
+void write_EEPROM(uint8_t address, uint8_t data){
+    while(WR);
+    EEADR = address;
+    EEDAT = data;
+    EECON1bits.EEPGD = 0;
+    EECON1bits.WREN = 1;
+    INTCONbits.GIE = 0;
+    EECON2 = 0x55;
+    EECON2 = 0xAA;
+    EECON1bits.WR = 1;
+    EECON1bits.WREN = 0;
+    
+    INTCONbits.GIE = 1;
+}
+
+uint8_t read_EEPROM(uint8_t address){
+    while(WR || RD);
+    EEADR = address;
+    EECON1bits.EEPGD = 0;
+    EECON1bits.RD = 1;
+    return EEDAT;
+}
+
 void modomanual(void){
+    //PWM con módulo CCP
     // Iniciar la conversión ADC
     ADCON0bits.CHS = 0b0000;
     __delay_us(100);
@@ -125,12 +244,13 @@ void modomanual(void){
     ADIF = 0;                   // Apaga la bandera del ADC
     // Hará el mapeo del ADC a valores para el servo
     // mapeo(valor, inmax, outmin, outmax)
-    vPWM = mapeo(ADRESH, 0, 255, 63, 125);
-    PORTD = vPWM;
+    if (modo == 0){
+        v1PWM = mapeo(ADRESH, 0, 255, 63, 125);
+    }
     // Obtiene los 2 bits más bajos de vPWM
-    vPWMl = vPWM & 0x003;
+    vPWMl = v1PWM & 0x003;
     // Obtiene los 8 bits más altos de vPWM 
-    vPWMh = (vPWM & 0x3FC) >> 2;
+    vPWMh = (v1PWM & 0x3FC) >> 2;
     // Carga los bits bajos a CCP1CON <5:4>
     CCP1CONbits.DC1B = vPWMl;
     // Carga los bits altos a CCPR1L
@@ -143,24 +263,29 @@ void modomanual(void){
     while (ADCON0bits.GO == 1); // Revisa si ya terminó la conversión ADC
     ADIF = 0;               // Apaga la bandera del ADC
     // Hará el mapeo del ADC a valores para el servo
-    vPWM = mapeo(ADRESH, 0, 255, 63, 125);
+    if (modo == 0){
+        v2PWM = mapeo(ADRESH, 0, 255, 63, 125);
+    }
     // Obtiene los 2 bits más bajos de vPWM
-    vPWMl = vPWM & 0x003;
+    vPWMl = v2PWM & 0x003;
     // Obtiene los 8 bits más altos de vPWM 
-    vPWMh = (vPWM & 0x3FC) >> 2;
+    vPWMh = (v2PWM & 0x3FC) >> 2;
     // Carga los bits bajos a CCP2CON <5:4>
     CCP2CONbits.DC2B0 = vPWMl & 0x01;
     CCP2CONbits.DC2B1 = ((vPWMl & 0x02) >> 1);
     // Carga los bits altos a CCPR2L
     CCPR2L = vPWMh;  
     
+    //PWM con TMR0
     // Cambia a canal analógico 2
     ADCON0bits.CHS = 0b0010;
     __delay_us(100);
     ADCON0bits.GO = 1;
     while (ADCON0bits.GO == 1); // Revisa si ya terminó la conversión ADC
     ADIF = 0; 
-    HIGHpulse0 = mapeo(ADRESH, 0, 255, 7, 17);
+    if (modo == 0){
+        HIGHpulse0 = mapeo(ADRESH, 0, 255, 7, 17);
+    }
     
      // Cambia a canal analógico 3
     ADCON0bits.CHS = 0b0011;
@@ -168,6 +293,7 @@ void modomanual(void){
     ADCON0bits.GO = 1;
     while (ADCON0bits.GO == 1); // Revisa si ya terminó la conversión ADC
     ADIF = 0; 
-    HIGHpulse1 = mapeo(ADRESH, 0, 255, 7, 17);
-        
+    if (modo == 0){
+        HIGHpulse1 = mapeo(ADRESH, 0, 255, 7, 17);
+    }    
 }

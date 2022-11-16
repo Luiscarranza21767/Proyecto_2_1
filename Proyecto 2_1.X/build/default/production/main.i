@@ -2703,14 +2703,21 @@ void modomanual(void);
 void setup(void);
 void setupTMR0(void);
 void hightime(int tdelay);
+void setup_portb(void);
+void write_EEPROM(uint8_t address, uint8_t data);
 unsigned int mapeo(int valor, int inmin, int inmax, int outmin, int outmax);
+uint8_t read_EEPROM(uint8_t address);
 
-unsigned int vPWM;
+unsigned int v1PWM;
+unsigned int v2PWM;
 unsigned int vPWMl;
 unsigned int vPWMh;
 unsigned int HIGHpulse0;
 unsigned int HIGHpulse1;
 int cont;
+int modo;
+int pos;
+int B4Flag;
 
 void __attribute__((picinterrupt(("")))) isr (void){
     if (INTCONbits.T0IF){
@@ -2724,6 +2731,41 @@ void __attribute__((picinterrupt(("")))) isr (void){
         PORTCbits.RC3 = 0;
 
     }
+    if (INTCONbits.RBIF){
+        if (PORTBbits.RB7 == 0)
+        {
+            while(PORTBbits.RB7 == 0);
+            if (modo < 1){
+                modo = modo + 1;
+            }
+            else {
+                modo = 0;
+            }
+        }
+        if(PORTBbits.RB6 == 0){
+            while(PORTBbits.RB6 == 0);
+            if (pos < 4){
+                pos = pos +1;
+            }
+            else {
+                pos = 1;
+            }
+        }
+        if(PORTBbits.RB5 == 0){
+            while(PORTBbits.RB5 == 0);
+            if (pos > 1){
+                pos = pos - 1;
+            }
+            else {
+                pos = 4;
+            }
+        }
+        if(PORTBbits.RB4 == 0){
+            while(PORTBbits.RB4 == 0);
+            B4Flag = 1;
+        }
+        INTCONbits.RBIF = 0;
+    }
 }
 void main(void) {
     setup();
@@ -2731,19 +2773,72 @@ void main(void) {
     setup_ADC();
     setupPWM();
     setupTMR0();
+    setup_portb();
+    pos = 1;
+    B4Flag = 0;
     while(1){
-        modomanual();
-        _delay((unsigned long)((1)*(1000000/4000.0)));
+        if(modo == 0){
+            modomanual();
+            PORTD = pos;
+            if (B4Flag == 1){
+                B4Flag = 0;
+                int addr;
+                if (pos == 1){
+                    addr = 0;}
+                else if (pos == 2){
+                    addr = 4;}
+                else if (pos == 3){
+                    addr = 8;}
+                else if (pos == 4){
+                    addr = 12;}
+                write_EEPROM(addr, v1PWM);
+                write_EEPROM((addr + 1), v2PWM);
+                write_EEPROM((addr + 2), HIGHpulse0);
+                write_EEPROM((addr + 3), HIGHpulse1);
+            }
+            _delay((unsigned long)((1)*(1000000/4000.0)));
+        }
+        else if (modo == 1){
+            if (B4Flag == 1){
+                B4Flag = 0;
+                int addr;
+                if (pos == 1){
+                    addr = 0;}
+                else if (pos == 2){
+                    addr = 4;}
+                else if (pos == 3){
+                    addr = 8;}
+                else if (pos == 4){
+                    addr = 12;}
+                v1PWM = read_EEPROM(addr);
+                v2PWM = read_EEPROM((addr+1));
+                HIGHpulse0 = read_EEPROM((addr+2));
+                HIGHpulse1 = read_EEPROM((addr+3));
+            }
+            modomanual();
+            PORTD = pos;
+            _delay((unsigned long)((1)*(1000000/4000.0)));
+        }
+
     }
 }
 
 void setup(void){
     ANSELH = 0;
     TRISB = 0;
-    TRISC = 0;
+    TRISC = 0b10000000;
     TRISD = 0;
     PORTC = 0;
     PORTD = 0;
+}
+
+void setup_portb(void){
+    TRISB = 0b11110000;
+    INTCONbits.RBIE = 1;
+    INTCONbits.RBIF = 0;
+    IOCB = 0b11110000;
+    WPUB = 0b11110000;
+    OPTION_REGbits.nRBPU = 0;
 }
 
 void setupTMR0(void){
@@ -2771,7 +2866,31 @@ void hightime(int tdelay){
     }
 }
 
+void write_EEPROM(uint8_t address, uint8_t data){
+    while(WR);
+    EEADR = address;
+    EEDAT = data;
+    EECON1bits.EEPGD = 0;
+    EECON1bits.WREN = 1;
+    INTCONbits.GIE = 0;
+    EECON2 = 0x55;
+    EECON2 = 0xAA;
+    EECON1bits.WR = 1;
+    EECON1bits.WREN = 0;
+
+    INTCONbits.GIE = 1;
+}
+
+uint8_t read_EEPROM(uint8_t address){
+    while(WR || RD);
+    EEADR = address;
+    EECON1bits.EEPGD = 0;
+    EECON1bits.RD = 1;
+    return EEDAT;
+}
+
 void modomanual(void){
+
 
     ADCON0bits.CHS = 0b0000;
     _delay((unsigned long)((100)*(1000000/4000000.0)));
@@ -2780,12 +2899,13 @@ void modomanual(void){
     ADIF = 0;
 
 
-    vPWM = mapeo(ADRESH, 0, 255, 63, 125);
-    PORTD = vPWM;
+    if (modo == 0){
+        v1PWM = mapeo(ADRESH, 0, 255, 63, 125);
+    }
 
-    vPWMl = vPWM & 0x003;
+    vPWMl = v1PWM & 0x003;
 
-    vPWMh = (vPWM & 0x3FC) >> 2;
+    vPWMh = (v1PWM & 0x3FC) >> 2;
 
     CCP1CONbits.DC1B = vPWMl;
 
@@ -2798,11 +2918,13 @@ void modomanual(void){
     while (ADCON0bits.GO == 1);
     ADIF = 0;
 
-    vPWM = mapeo(ADRESH, 0, 255, 63, 125);
+    if (modo == 0){
+        v2PWM = mapeo(ADRESH, 0, 255, 63, 125);
+    }
 
-    vPWMl = vPWM & 0x003;
+    vPWMl = v2PWM & 0x003;
 
-    vPWMh = (vPWM & 0x3FC) >> 2;
+    vPWMh = (v2PWM & 0x3FC) >> 2;
 
     CCP2CONbits.DC2B0 = vPWMl & 0x01;
     CCP2CONbits.DC2B1 = ((vPWMl & 0x02) >> 1);
@@ -2810,12 +2932,15 @@ void modomanual(void){
     CCPR2L = vPWMh;
 
 
+
     ADCON0bits.CHS = 0b0010;
     _delay((unsigned long)((100)*(1000000/4000000.0)));
     ADCON0bits.GO = 1;
     while (ADCON0bits.GO == 1);
     ADIF = 0;
-    HIGHpulse0 = mapeo(ADRESH, 0, 255, 7, 17);
+    if (modo == 0){
+        HIGHpulse0 = mapeo(ADRESH, 0, 255, 7, 17);
+    }
 
 
     ADCON0bits.CHS = 0b0011;
@@ -2823,6 +2948,7 @@ void modomanual(void){
     ADCON0bits.GO = 1;
     while (ADCON0bits.GO == 1);
     ADIF = 0;
-    HIGHpulse1 = mapeo(ADRESH, 0, 255, 7, 17);
-
+    if (modo == 0){
+        HIGHpulse1 = mapeo(ADRESH, 0, 255, 7, 17);
+    }
 }
