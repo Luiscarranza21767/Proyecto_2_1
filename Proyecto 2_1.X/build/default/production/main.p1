@@ -1028,256 +1028,256 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 192 ]
 {
 "209
-[; ;main.c: 209:         _delay((unsigned long)((50)*(1000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 1000000 `l `d .4000000.0 `ul ]
-"210
-[; ;main.c: 210:         tdelay = tdelay - 1;
+[; ;main.c: 209:         tdelay = tdelay - 1;
 [e = _tdelay - _tdelay -> 1 `i ]
-"211
-[; ;main.c: 211:     }
+"210
+[; ;main.c: 210:     }
 }
 [e :U 191 ]
 "208
 [; ;main.c: 208:     while (tdelay > 0){
 [e $ > _tdelay -> 0 `i 192  ]
 [e :U 193 ]
-"212
-[; ;main.c: 212: }
+"211
+[; ;main.c: 211: }
 [e :UE 190 ]
 }
-"214
-[; ;main.c: 214: void write_EEPROM(uint8_t address, uint8_t data){
+"213
+[; ;main.c: 213: void write_EEPROM(uint8_t address, uint8_t data){
 [v _write_EEPROM `(v ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _write_EEPROM ]
 [v _address `uc ~T0 @X0 1 r1 ]
 [v _data `uc ~T0 @X0 1 r2 ]
 [f ]
-"215
-[; ;main.c: 215:     while(WR);
+"214
+[; ;main.c: 214:     while(WR);
 [e $U 195  ]
 [e :U 196 ]
 [e :U 195 ]
 [e $ _WR 196  ]
 [e :U 197 ]
-"216
-[; ;main.c: 216:     EEADR = address;
+"215
+[; ;main.c: 215:     EEADR = address;
 [e = _EEADR _address ]
-"217
-[; ;main.c: 217:     EEDAT = data;
+"216
+[; ;main.c: 216:     EEDAT = data;
 [e = _EEDAT _data ]
-"218
-[; ;main.c: 218:     EECON1bits.EEPGD = 0;
+"217
+[; ;main.c: 217:     EECON1bits.EEPGD = 0;
 [e = . . _EECON1bits 0 5 -> -> 0 `i `uc ]
-"219
-[; ;main.c: 219:     EECON1bits.WREN = 1;
+"218
+[; ;main.c: 218:     EECON1bits.WREN = 1;
 [e = . . _EECON1bits 0 2 -> -> 1 `i `uc ]
-"220
-[; ;main.c: 220:     INTCONbits.GIE = 0;
+"219
+[; ;main.c: 219:     INTCONbits.GIE = 0;
 [e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
-"221
-[; ;main.c: 221:     EECON2 = 0x55;
+"220
+[; ;main.c: 220:     EECON2 = 0x55;
 [e = _EECON2 -> -> 85 `i `uc ]
-"222
-[; ;main.c: 222:     EECON2 = 0xAA;
+"221
+[; ;main.c: 221:     EECON2 = 0xAA;
 [e = _EECON2 -> -> 170 `i `uc ]
-"223
-[; ;main.c: 223:     EECON1bits.WR = 1;
+"222
+[; ;main.c: 222:     EECON1bits.WR = 1;
 [e = . . _EECON1bits 0 1 -> -> 1 `i `uc ]
-"224
-[; ;main.c: 224:     EECON1bits.WREN = 0;
+"223
+[; ;main.c: 223:     EECON1bits.WREN = 0;
 [e = . . _EECON1bits 0 2 -> -> 0 `i `uc ]
-"226
-[; ;main.c: 226:     INTCONbits.GIE = 1;
+"225
+[; ;main.c: 225:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"227
-[; ;main.c: 227: }
+"226
+[; ;main.c: 226: }
 [e :UE 194 ]
 }
-"229
-[; ;main.c: 229: uint8_t read_EEPROM(uint8_t address){
+"228
+[; ;main.c: 228: uint8_t read_EEPROM(uint8_t address){
 [v _read_EEPROM `(uc ~T0 @X0 1 ef1`uc ]
 {
 [e :U _read_EEPROM ]
 [v _address `uc ~T0 @X0 1 r1 ]
 [f ]
-"230
-[; ;main.c: 230:     while(WR || RD);
+"229
+[; ;main.c: 229:     while(WR || RD);
 [e $U 199  ]
 [e :U 200 ]
 [e :U 199 ]
 [e $ || _WR _RD 200  ]
 [e :U 201 ]
-"231
-[; ;main.c: 231:     EEADR = address;
+"230
+[; ;main.c: 230:     EEADR = address;
 [e = _EEADR _address ]
-"232
-[; ;main.c: 232:     EECON1bits.EEPGD = 0;
+"231
+[; ;main.c: 231:     EECON1bits.EEPGD = 0;
 [e = . . _EECON1bits 0 5 -> -> 0 `i `uc ]
-"233
-[; ;main.c: 233:     EECON1bits.RD = 1;
+"232
+[; ;main.c: 232:     EECON1bits.RD = 1;
 [e = . . _EECON1bits 0 0 -> -> 1 `i `uc ]
-"234
-[; ;main.c: 234:     return EEDAT;
+"233
+[; ;main.c: 233:     return EEDAT;
 [e ) _EEDAT ]
 [e $UE 198  ]
-"235
-[; ;main.c: 235: }
+"234
+[; ;main.c: 234: }
 [e :UE 198 ]
 }
-"237
-[; ;main.c: 237: void modomanual(void){
+"236
+[; ;main.c: 236: void modomanual(void){
 [v _modomanual `(v ~T0 @X0 1 ef ]
 {
 [e :U _modomanual ]
 [f ]
-"240
-[; ;main.c: 240:     ADCON0bits.CHS = 0b0000;
+"239
+[; ;main.c: 239:     ADCON0bits.CHS = 0b0000;
 [e = . . _ADCON0bits 0 2 -> -> 0 `i `uc ]
-"241
-[; ;main.c: 241:     _delay((unsigned long)((100)*(1000000/4000000.0)));
+"240
+[; ;main.c: 240:     _delay((unsigned long)((100)*(1000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 1000000 `l `d .4000000.0 `ul ]
-"242
-[; ;main.c: 242:     ADCON0bits.GO = 1;
+"241
+[; ;main.c: 241:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-"243
-[; ;main.c: 243:     while (ADCON0bits.GO == 1);
+"242
+[; ;main.c: 242:     while (ADCON0bits.GO == 1);
 [e $U 203  ]
 [e :U 204 ]
 [e :U 203 ]
 [e $ == -> . . _ADCON0bits 1 1 `i -> 1 `i 204  ]
 [e :U 205 ]
-"244
-[; ;main.c: 244:     ADIF = 0;
+"243
+[; ;main.c: 243:     ADIF = 0;
 [e = _ADIF -> -> 0 `i `b ]
-"247
-[; ;main.c: 247:     if (modo == 0){
+"246
+[; ;main.c: 246:     if (modo == 0){
 [e $ ! == _modo -> 0 `i 206  ]
 {
-"248
-[; ;main.c: 248:         v1PWM = mapeo(ADRESH, 0, 255, 63, 125);
+"247
+[; ;main.c: 247:         v1PWM = mapeo(ADRESH, 0, 255, 63, 125);
 [e = _v1PWM ( _mapeo (4 , , , , -> _ADRESH `i -> 0 `i -> 255 `i -> 63 `i -> 125 `i ]
-"249
-[; ;main.c: 249:     }
+"248
+[; ;main.c: 248:     }
 }
 [e :U 206 ]
-"251
-[; ;main.c: 251:     vPWMl = v1PWM & 0x003;
+"250
+[; ;main.c: 250:     vPWMl = v1PWM & 0x003;
 [e = _vPWMl & _v1PWM -> -> 3 `i `ui ]
-"253
-[; ;main.c: 253:     vPWMh = (v1PWM & 0x3FC) >> 2;
+"252
+[; ;main.c: 252:     vPWMh = (v1PWM & 0x3FC) >> 2;
 [e = _vPWMh >> & _v1PWM -> -> 1020 `i `ui -> 2 `i ]
-"255
-[; ;main.c: 255:     CCP1CONbits.DC1B = vPWMl;
+"254
+[; ;main.c: 254:     CCP1CONbits.DC1B = vPWMl;
 [e = . . _CCP1CONbits 0 1 -> _vPWMl `uc ]
-"257
-[; ;main.c: 257:     CCPR1L = vPWMh;
+"256
+[; ;main.c: 256:     CCPR1L = vPWMh;
 [e = _CCPR1L -> _vPWMh `uc ]
-"260
-[; ;main.c: 260:     ADCON0bits.CHS = 0b0001;
+"259
+[; ;main.c: 259:     ADCON0bits.CHS = 0b0001;
 [e = . . _ADCON0bits 0 2 -> -> 1 `i `uc ]
-"261
-[; ;main.c: 261:     _delay((unsigned long)((100)*(1000000/4000000.0)));
+"260
+[; ;main.c: 260:     _delay((unsigned long)((100)*(1000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 1000000 `l `d .4000000.0 `ul ]
-"262
-[; ;main.c: 262:     ADCON0bits.GO = 1;
+"261
+[; ;main.c: 261:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-"263
-[; ;main.c: 263:     while (ADCON0bits.GO == 1);
+"262
+[; ;main.c: 262:     while (ADCON0bits.GO == 1);
 [e $U 207  ]
 [e :U 208 ]
 [e :U 207 ]
 [e $ == -> . . _ADCON0bits 1 1 `i -> 1 `i 208  ]
 [e :U 209 ]
-"264
-[; ;main.c: 264:     ADIF = 0;
+"263
+[; ;main.c: 263:     ADIF = 0;
 [e = _ADIF -> -> 0 `i `b ]
-"266
-[; ;main.c: 266:     if (modo == 0){
+"265
+[; ;main.c: 265:     if (modo == 0){
 [e $ ! == _modo -> 0 `i 210  ]
 {
-"267
-[; ;main.c: 267:         v2PWM = mapeo(ADRESH, 0, 255, 63, 125);
+"266
+[; ;main.c: 266:         v2PWM = mapeo(ADRESH, 0, 255, 63, 125);
 [e = _v2PWM ( _mapeo (4 , , , , -> _ADRESH `i -> 0 `i -> 255 `i -> 63 `i -> 125 `i ]
-"268
-[; ;main.c: 268:     }
+"267
+[; ;main.c: 267:     }
 }
 [e :U 210 ]
-"270
-[; ;main.c: 270:     vPWMl = v2PWM & 0x003;
+"269
+[; ;main.c: 269:     vPWMl = v2PWM & 0x003;
 [e = _vPWMl & _v2PWM -> -> 3 `i `ui ]
-"272
-[; ;main.c: 272:     vPWMh = (v2PWM & 0x3FC) >> 2;
+"271
+[; ;main.c: 271:     vPWMh = (v2PWM & 0x3FC) >> 2;
 [e = _vPWMh >> & _v2PWM -> -> 1020 `i `ui -> 2 `i ]
-"274
-[; ;main.c: 274:     CCP2CONbits.DC2B0 = vPWMl & 0x01;
+"273
+[; ;main.c: 273:     CCP2CONbits.DC2B0 = vPWMl & 0x01;
 [e = . . _CCP2CONbits 0 1 -> & _vPWMl -> -> 1 `i `ui `uc ]
-"275
-[; ;main.c: 275:     CCP2CONbits.DC2B1 = ((vPWMl & 0x02) >> 1);
+"274
+[; ;main.c: 274:     CCP2CONbits.DC2B1 = ((vPWMl & 0x02) >> 1);
 [e = . . _CCP2CONbits 0 2 -> >> & _vPWMl -> -> 2 `i `ui -> 1 `i `uc ]
-"277
-[; ;main.c: 277:     CCPR2L = vPWMh;
+"276
+[; ;main.c: 276:     CCPR2L = vPWMh;
 [e = _CCPR2L -> _vPWMh `uc ]
-"281
-[; ;main.c: 281:     ADCON0bits.CHS = 0b0010;
+"280
+[; ;main.c: 280:     ADCON0bits.CHS = 0b0010;
 [e = . . _ADCON0bits 0 2 -> -> 2 `i `uc ]
-"282
-[; ;main.c: 282:     _delay((unsigned long)((100)*(1000000/4000000.0)));
+"281
+[; ;main.c: 281:     _delay((unsigned long)((100)*(1000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 1000000 `l `d .4000000.0 `ul ]
-"283
-[; ;main.c: 283:     ADCON0bits.GO = 1;
+"282
+[; ;main.c: 282:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-"284
-[; ;main.c: 284:     while (ADCON0bits.GO == 1);
+"283
+[; ;main.c: 283:     while (ADCON0bits.GO == 1);
 [e $U 211  ]
 [e :U 212 ]
 [e :U 211 ]
 [e $ == -> . . _ADCON0bits 1 1 `i -> 1 `i 212  ]
 [e :U 213 ]
-"285
-[; ;main.c: 285:     ADIF = 0;
+"284
+[; ;main.c: 284:     ADIF = 0;
 [e = _ADIF -> -> 0 `i `b ]
-"286
-[; ;main.c: 286:     if (modo == 0){
+"285
+[; ;main.c: 285:     if (modo == 0){
 [e $ ! == _modo -> 0 `i 214  ]
 {
+"286
+[; ;main.c: 286:         HIGHpulse0 = mapeo(ADRESH, 0, 255, 9, 27);
+[e = _HIGHpulse0 ( _mapeo (4 , , , , -> _ADRESH `i -> 0 `i -> 255 `i -> 9 `i -> 27 `i ]
 "287
-[; ;main.c: 287:         HIGHpulse0 = mapeo(ADRESH, 0, 255, 7, 17);
-[e = _HIGHpulse0 ( _mapeo (4 , , , , -> _ADRESH `i -> 0 `i -> 255 `i -> 7 `i -> 17 `i ]
-"288
-[; ;main.c: 288:     }
+[; ;main.c: 287:     }
 }
 [e :U 214 ]
-"291
-[; ;main.c: 291:     ADCON0bits.CHS = 0b0011;
+"290
+[; ;main.c: 290:     ADCON0bits.CHS = 0b0011;
 [e = . . _ADCON0bits 0 2 -> -> 3 `i `uc ]
-"292
-[; ;main.c: 292:     _delay((unsigned long)((100)*(1000000/4000000.0)));
+"291
+[; ;main.c: 291:     _delay((unsigned long)((100)*(1000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 1000000 `l `d .4000000.0 `ul ]
-"293
-[; ;main.c: 293:     ADCON0bits.GO = 1;
+"292
+[; ;main.c: 292:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-"294
-[; ;main.c: 294:     while (ADCON0bits.GO == 1);
+"293
+[; ;main.c: 293:     while (ADCON0bits.GO == 1);
 [e $U 215  ]
 [e :U 216 ]
 [e :U 215 ]
 [e $ == -> . . _ADCON0bits 1 1 `i -> 1 `i 216  ]
 [e :U 217 ]
-"295
-[; ;main.c: 295:     ADIF = 0;
+"294
+[; ;main.c: 294:     ADIF = 0;
 [e = _ADIF -> -> 0 `i `b ]
-"296
-[; ;main.c: 296:     if (modo == 0){
+"295
+[; ;main.c: 295:     if (modo == 0){
 [e $ ! == _modo -> 0 `i 218  ]
 {
+"296
+[; ;main.c: 296:         HIGHpulse1 = mapeo(ADRESH, 0, 255, 9, 22);
+[e = _HIGHpulse1 ( _mapeo (4 , , , , -> _ADRESH `i -> 0 `i -> 255 `i -> 9 `i -> 22 `i ]
 "297
-[; ;main.c: 297:         HIGHpulse1 = mapeo(ADRESH, 0, 255, 7, 17);
-[e = _HIGHpulse1 ( _mapeo (4 , , , , -> _ADRESH `i -> 0 `i -> 255 `i -> 7 `i -> 17 `i ]
-"298
-[; ;main.c: 298:     }
+[; ;main.c: 297:     }
 }
 [e :U 218 ]
+"298
+[; ;main.c: 298:     _delay((unsigned long)((50)*(1000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
 "299
 [; ;main.c: 299: }
 [e :UE 202 ]

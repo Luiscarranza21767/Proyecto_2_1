@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\sources\\c90\\pic\\__eeprom.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,37 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 11 "main.c"
-#pragma config FOSC = INTRC_NOCLKOUT
-
-#pragma config WDTE = OFF
-
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-
-#pragma config CP = OFF
-
-#pragma config CPD = OFF
-
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-
-#pragma config FCMEN = OFF
-
-#pragma config LVP = OFF
-
-
-
-#pragma config BOR4V = BOR40V
-
-#pragma config WRT = OFF
-
-
-
-
-
-
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\sources\\c90\\pic\\__eeprom.c" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2654,301 +2624,176 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 2 3
-# 39 "main.c" 2
-
-# 1 "./oscilador.h" 1
-# 14 "./oscilador.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdint.h" 1 3
-# 14 "./oscilador.h" 2
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\sources\\c90\\pic\\__eeprom.c" 2
 
 
 
 
+void
+__eecpymem(volatile unsigned char *to, __eeprom unsigned char * from, unsigned char size)
+{
+ volatile unsigned char *cp = to;
 
+ while (EECON1bits.WR) continue;
+ EEADR = (unsigned char)from;
+ while(size--) {
+  while (EECON1bits.WR) continue;
 
-void setupINTOSC(uint8_t IRCF);
-# 40 "main.c" 2
+  EECON1 &= 0x7F;
 
-# 1 "./setupADC.h" 1
-# 14 "./setupADC.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdint.h" 1 3
-# 14 "./setupADC.h" 2
-
-
-
-
-
-
-void setup_ADC(void);
-# 41 "main.c" 2
-
-# 1 "./setupPWM.h" 1
-# 14 "./setupPWM.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdint.h" 1 3
-# 14 "./setupPWM.h" 2
-
-
-
-
-
-
-void setupPWM(void);
-# 42 "main.c" 2
-
-
-
-
-
-void modomanual(void);
-void setup(void);
-void setupTMR0(void);
-void hightime(int tdelay);
-void setup_portb(void);
-void write_EEPROM(uint8_t address, uint8_t data);
-unsigned int mapeo(int valor, int inmin, int inmax, int outmin, int outmax);
-uint8_t read_EEPROM(uint8_t address);
-
-unsigned int v1PWM;
-unsigned int v2PWM;
-unsigned int vPWMl;
-unsigned int vPWMh;
-unsigned int HIGHpulse0;
-unsigned int HIGHpulse1;
-int cont;
-int modo;
-int pos;
-int B4Flag;
-
-void __attribute__((picinterrupt(("")))) isr (void){
-    if (INTCONbits.T0IF){
-        INTCONbits.T0IF = 0;
-        TMR0 = 100;
-        PORTCbits.RC0 = 1;
-        hightime(HIGHpulse0);
-        PORTCbits.RC0 = 0;
-        PORTCbits.RC3 = 1;
-        hightime(HIGHpulse1);
-        PORTCbits.RC3 = 0;
-
-    }
-    if (INTCONbits.RBIF){
-        if (PORTBbits.RB7 == 0)
-        {
-            while(PORTBbits.RB7 == 0);
-            if (modo < 1){
-                modo = modo + 1;
-            }
-            else {
-                modo = 0;
-            }
-        }
-        if(PORTBbits.RB6 == 0){
-            while(PORTBbits.RB6 == 0);
-            if (pos < 4){
-                pos = pos +1;
-            }
-            else {
-                pos = 1;
-            }
-        }
-        if(PORTBbits.RB5 == 0){
-            while(PORTBbits.RB5 == 0);
-            if (pos > 1){
-                pos = pos - 1;
-            }
-            else {
-                pos = 4;
-            }
-        }
-        if(PORTBbits.RB4 == 0){
-            while(PORTBbits.RB4 == 0);
-            B4Flag = 1;
-        }
-        INTCONbits.RBIF = 0;
-    }
-}
-void main(void) {
-    setup();
-    setupINTOSC(4);
-    setup_ADC();
-    setupPWM();
-    setupTMR0();
-    setup_portb();
-    pos = 1;
-    B4Flag = 0;
-    while(1){
-        if(modo == 0){
-            modomanual();
-            PORTD = pos;
-            if (B4Flag == 1){
-                B4Flag = 0;
-                int addr;
-                if (pos == 1){
-                    addr = 0;}
-                else if (pos == 2){
-                    addr = 4;}
-                else if (pos == 3){
-                    addr = 8;}
-                else if (pos == 4){
-                    addr = 12;}
-                write_EEPROM(addr, v1PWM);
-                write_EEPROM((addr + 1), v2PWM);
-                write_EEPROM((addr + 2), HIGHpulse0);
-                write_EEPROM((addr + 3), HIGHpulse1);
-            }
-            _delay((unsigned long)((1)*(1000000/4000.0)));
-        }
-        else if (modo == 1){
-            if (B4Flag == 1){
-                B4Flag = 0;
-                int addr;
-                if (pos == 1){
-                    addr = 0;}
-                else if (pos == 2){
-                    addr = 4;}
-                else if (pos == 3){
-                    addr = 8;}
-                else if (pos == 4){
-                    addr = 12;}
-                v1PWM = read_EEPROM(addr);
-                v2PWM = read_EEPROM((addr+1));
-                HIGHpulse0 = read_EEPROM((addr+2));
-                HIGHpulse1 = read_EEPROM((addr+3));
-            }
-            modomanual();
-            PORTD = pos;
-            _delay((unsigned long)((1)*(1000000/4000.0)));
-        }
-
-    }
+  EECON1bits.RD = 1;
+  *cp++ = EEDATA;
+  ++EEADR;
+ }
+# 36 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\sources\\c90\\pic\\__eeprom.c"
 }
 
-void setup(void){
-    ANSELH = 0;
-    TRISB = 0;
-    TRISC = 0b10000000;
-    TRISD = 0;
-    PORTC = 0;
-    PORTD = 0;
+void
+__memcpyee(__eeprom unsigned char * to, const unsigned char *from, unsigned char size)
+{
+ const unsigned char *ptr =from;
+
+ while (EECON1bits.WR) continue;
+ EEADR = (unsigned char)to - 1U;
+
+ EECON1 &= 0x7F;
+
+ while(size--) {
+  while (EECON1bits.WR) {
+   continue;
+  }
+  EEDATA = *ptr++;
+  ++EEADR;
+  STATUSbits.CARRY = 0;
+  if (INTCONbits.GIE) {
+   STATUSbits.CARRY = 1;
+  }
+  INTCONbits.GIE = 0;
+  EECON1bits.WREN = 1;
+  EECON2 = 0x55;
+  EECON2 = 0xAA;
+  EECON1bits.WR = 1;
+  EECON1bits.WREN = 0;
+  if (STATUSbits.CARRY) {
+   INTCONbits.GIE = 1;
+  }
+ }
+# 101 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\sources\\c90\\pic\\__eeprom.c"
 }
 
-void setup_portb(void){
-    TRISB = 0b11110000;
-    INTCONbits.RBIE = 1;
-    INTCONbits.RBIF = 0;
-    IOCB = 0b11110000;
-    WPUB = 0b11110000;
-    OPTION_REGbits.nRBPU = 0;
+unsigned char
+__eetoc(__eeprom void *addr)
+{
+ unsigned char data;
+ __eecpymem((unsigned char *) &data,addr,1);
+ return data;
 }
 
-void setupTMR0(void){
-    INTCONbits.GIE = 1;
-    INTCONbits.T0IE = 1;
-    INTCONbits.T0IF = 0;
-
-    OPTION_REGbits.T0CS = 0;
-    OPTION_REGbits.PSA = 0;
-    OPTION_REGbits.PS = 0b100;
-    TMR0 = 100;
-    cont = 0;
+unsigned int
+__eetoi(__eeprom void *addr)
+{
+ unsigned int data;
+ __eecpymem((unsigned char *) &data,addr,2);
+ return data;
 }
 
-unsigned int mapeo(int valor, int inmin, int inmax, int outmin,int outmax){
-    unsigned int resultado;
-    resultado = (((outmax-outmin)*(valor-inmin)/(inmax)) + outmin);
-    return resultado;
+#pragma warning push
+#pragma warning disable 2040
+__uint24
+__eetom(__eeprom void *addr)
+{
+ __uint24 data;
+ __eecpymem((unsigned char *) &data,addr,3);
+ return data;
+}
+#pragma warning pop
+
+unsigned long
+__eetol(__eeprom void *addr)
+{
+ unsigned long data;
+ __eecpymem((unsigned char *) &data,addr,4);
+ return data;
 }
 
-void hightime(int tdelay){
-    while (tdelay > 0){
-        tdelay = tdelay - 1;
-    }
+#pragma warning push
+#pragma warning disable 1516
+unsigned long long
+__eetoo(__eeprom void *addr)
+{
+ unsigned long long data;
+ __eecpymem((unsigned char *) &data,addr,8);
+ return data;
+}
+#pragma warning pop
+
+unsigned char
+__ctoee(__eeprom void *addr, unsigned char data)
+{
+ __memcpyee(addr,(unsigned char *) &data,1);
+ return data;
 }
 
-void write_EEPROM(uint8_t address, uint8_t data){
-    while(WR);
-    EEADR = address;
-    EEDAT = data;
-    EECON1bits.EEPGD = 0;
-    EECON1bits.WREN = 1;
-    INTCONbits.GIE = 0;
-    EECON2 = 0x55;
-    EECON2 = 0xAA;
-    EECON1bits.WR = 1;
-    EECON1bits.WREN = 0;
-
-    INTCONbits.GIE = 1;
+unsigned int
+__itoee(__eeprom void *addr, unsigned int data)
+{
+ __memcpyee(addr,(unsigned char *) &data,2);
+ return data;
 }
 
-uint8_t read_EEPROM(uint8_t address){
-    while(WR || RD);
-    EEADR = address;
-    EECON1bits.EEPGD = 0;
-    EECON1bits.RD = 1;
-    return EEDAT;
+#pragma warning push
+#pragma warning disable 2040
+__uint24
+__mtoee(__eeprom void *addr, __uint24 data)
+{
+ __memcpyee(addr,(unsigned char *) &data,3);
+ return data;
+}
+#pragma warning pop
+
+unsigned long
+__ltoee(__eeprom void *addr, unsigned long data)
+{
+ __memcpyee(addr,(unsigned char *) &data,4);
+ return data;
 }
 
-void modomanual(void){
+#pragma warning push
+#pragma warning disable 1516
+unsigned long long
+__otoee(__eeprom void *addr, unsigned long long data)
+{
+ __memcpyee(addr,(unsigned char *) &data,8);
+ return data;
+}
+#pragma warning pop
 
+float
+__eetoft(__eeprom void *addr)
+{
+ float data;
+ __eecpymem((unsigned char *) &data,addr,3);
+ return data;
+}
 
-    ADCON0bits.CHS = 0b0000;
-    _delay((unsigned long)((100)*(1000000/4000000.0)));
-    ADCON0bits.GO = 1;
-    while (ADCON0bits.GO == 1);
-    ADIF = 0;
+double
+__eetofl(__eeprom void *addr)
+{
+ double data;
+ __eecpymem((unsigned char *) &data,addr,4);
+ return data;
+}
 
+float
+__fttoee(__eeprom void *addr, float data)
+{
+ __memcpyee(addr,(unsigned char *) &data,3);
+ return data;
+}
 
-    if (modo == 0){
-        v1PWM = mapeo(ADRESH, 0, 255, 63, 125);
-    }
-
-    vPWMl = v1PWM & 0x003;
-
-    vPWMh = (v1PWM & 0x3FC) >> 2;
-
-    CCP1CONbits.DC1B = vPWMl;
-
-    CCPR1L = vPWMh;
-
-
-    ADCON0bits.CHS = 0b0001;
-    _delay((unsigned long)((100)*(1000000/4000000.0)));
-    ADCON0bits.GO = 1;
-    while (ADCON0bits.GO == 1);
-    ADIF = 0;
-
-    if (modo == 0){
-        v2PWM = mapeo(ADRESH, 0, 255, 63, 125);
-    }
-
-    vPWMl = v2PWM & 0x003;
-
-    vPWMh = (v2PWM & 0x3FC) >> 2;
-
-    CCP2CONbits.DC2B0 = vPWMl & 0x01;
-    CCP2CONbits.DC2B1 = ((vPWMl & 0x02) >> 1);
-
-    CCPR2L = vPWMh;
-
-
-
-    ADCON0bits.CHS = 0b0010;
-    _delay((unsigned long)((100)*(1000000/4000000.0)));
-    ADCON0bits.GO = 1;
-    while (ADCON0bits.GO == 1);
-    ADIF = 0;
-    if (modo == 0){
-        HIGHpulse0 = mapeo(ADRESH, 0, 255, 9, 27);
-    }
-
-
-    ADCON0bits.CHS = 0b0011;
-    _delay((unsigned long)((100)*(1000000/4000000.0)));
-    ADCON0bits.GO = 1;
-    while (ADCON0bits.GO == 1);
-    ADIF = 0;
-    if (modo == 0){
-        HIGHpulse1 = mapeo(ADRESH, 0, 255, 9, 22);
-    }
-    _delay((unsigned long)((50)*(1000000/4000.0)));
+double
+__fltoee(__eeprom void *addr, double data)
+{
+ __memcpyee(addr,(unsigned char *) &data,4);
+ return data;
 }

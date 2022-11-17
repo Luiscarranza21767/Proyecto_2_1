@@ -29,11 +29,11 @@
 [v _mapeo mapeo `(ui  1 e 2 0 ]
 "207
 [v _hightime hightime `(v  1 e 1 0 ]
-"214
+"213
 [v _write_EEPROM write_EEPROM `(v  1 e 1 0 ]
-"229
+"228
 [v _read_EEPROM read_EEPROM `(uc  1 e 1 0 ]
-"237
+"236
 [v _modomanual modomanual `(v  1 e 1 0 ]
 "10 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\oscilador.c
 [v _setupINTOSC setupINTOSC `(v  1 e 1 0 ]
@@ -324,14 +324,14 @@
 [v main@addr addr `i  1 a 2 32 ]
 "169
 } 0
-"214
+"213
 [v _write_EEPROM write_EEPROM `(v  1 e 1 0 ]
 {
 [v write_EEPROM@address address `uc  1 a 1 wreg ]
 [v write_EEPROM@address address `uc  1 a 1 wreg ]
 [v write_EEPROM@data data `uc  1 p 1 0 ]
 [v write_EEPROM@address address `uc  1 a 1 1 ]
-"227
+"226
 } 0
 "180
 [v _setup_portb setup_portb `(v  1 e 1 0 ]
@@ -366,15 +366,15 @@
 {
 "178
 } 0
-"229
+"228
 [v _read_EEPROM read_EEPROM `(uc  1 e 1 0 ]
 {
 [v read_EEPROM@address address `uc  1 a 1 wreg ]
 [v read_EEPROM@address address `uc  1 a 1 wreg ]
 [v read_EEPROM@address address `uc  1 a 1 0 ]
-"235
+"234
 } 0
-"237
+"236
 [v _modomanual modomanual `(v  1 e 1 0 ]
 {
 "299
@@ -424,5 +424,5 @@
 [v _hightime hightime `(v  1 e 1 0 ]
 {
 [v hightime@tdelay tdelay `i  1 p 2 0 ]
-"212
+"211
 } 0

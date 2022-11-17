@@ -206,7 +206,6 @@ unsigned int mapeo(int valor, int inmin, int inmax, int outmin,int outmax){
 
 void hightime(int tdelay){
     while (tdelay > 0){
-        __delay_us(50);
         tdelay = tdelay - 1;
     } 
 }
@@ -284,7 +283,7 @@ void modomanual(void){
     while (ADCON0bits.GO == 1); // Revisa si ya terminó la conversión ADC
     ADIF = 0; 
     if (modo == 0){
-        HIGHpulse0 = mapeo(ADRESH, 0, 255, 7, 17);
+        HIGHpulse0 = mapeo(ADRESH, 0, 255, 9, 27);
     }
     
      // Cambia a canal analógico 3
@@ -294,6 +293,7 @@ void modomanual(void){
     while (ADCON0bits.GO == 1); // Revisa si ya terminó la conversión ADC
     ADIF = 0; 
     if (modo == 0){
-        HIGHpulse1 = mapeo(ADRESH, 0, 255, 7, 17);
+        HIGHpulse1 = mapeo(ADRESH, 0, 255, 9, 22);
     }    
+    __delay_ms(50);
 }
