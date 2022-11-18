@@ -47,7 +47,7 @@ bssBANK0 BANK0 1 3F 3F 11 1 1
 clrtext CODE 0 7F7 7F7 8 2 1
 bssCOMMON COMMON 1 70 70 6 1 1
 config CONFIG 4 2007 2007 2 2 1
-$C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.o
+$C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 10 10 3 2 1
@@ -101,22 +101,22 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Proyecto_2_1.X.production.o
-13 cinit CODE >1186:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-13 cinit CODE >1189:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-13 cinit CODE >1254:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-14 cinit CODE >1255:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-15 cinit CODE >1256:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-16 cinit CODE >1257:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-17 cinit CODE >1258:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-18 cinit CODE >1259:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-19 cinit CODE >1262:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-1A cinit CODE >1263:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-1B cinit CODE >1264:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-1C cinit CODE >1265:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-1D cinit CODE >1266:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-22 cinit CODE >1272:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-22 cinit CODE >1274:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-23 cinit CODE >1275:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
+13 cinit CODE >1186:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+13 cinit CODE >1189:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+13 cinit CODE >1254:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+14 cinit CODE >1255:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+15 cinit CODE >1256:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+16 cinit CODE >1257:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+17 cinit CODE >1258:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+18 cinit CODE >1259:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+19 cinit CODE >1262:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+1A cinit CODE >1263:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+1B cinit CODE >1264:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+1C cinit CODE >1265:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+1D cinit CODE >1266:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+22 cinit CODE >1272:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+22 cinit CODE >1274:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+23 cinit CODE >1275:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
 4 intentry CODE >80:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
 F5A text25 CODE >202:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
 F5A text25 CODE >203:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
@@ -621,16 +621,16 @@ F39 text1 CODE >182:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main
 434 maintext CODE >156:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
 436 maintext CODE >157:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
 43B maintext CODE >159:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7F7 clrtext CODE >1241:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-7F7 clrtext CODE >1242:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-7F8 clrtext CODE >1243:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-7F8 clrtext CODE >1244:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-7F9 clrtext CODE >1245:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-7FA clrtext CODE >1246:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-7FB clrtext CODE >1247:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-7FC clrtext CODE >1248:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-7FD clrtext CODE >1249:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
-7FE clrtext CODE >1250:C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.s
+7F7 clrtext CODE >1241:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+7F7 clrtext CODE >1242:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+7F8 clrtext CODE >1243:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+7F8 clrtext CODE >1244:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+7F9 clrtext CODE >1245:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+7FA clrtext CODE >1246:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+7FB clrtext CODE >1247:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+7FC clrtext CODE >1248:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+7FD clrtext CODE >1249:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+7FE clrtext CODE >1250:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -663,25 +663,25 @@ _IOCB 96 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 _RCIF 65 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 _WPUB 95 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.o
+___sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
 _cent 4E 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_2_1.X.production.o
 _cont 41 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_2_1.X.production.o
 _main 798 0 CODE 0 maintext dist/default/production\Proyecto_2_1.X.production.o
 _modo 72 0 COMMON 1 bssCOMMON dist/default/production\Proyecto_2_1.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
-start 20 0 CODE 0 init C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.o
+start 20 0 CODE 0 init C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 ?___wmul 20 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 ?_convint 26 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 _read_EEPROM 1F42 0 CODE 0 text16 dist/default/production\Proyecto_2_1.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _setupINTOSC B20 0 CODE 0 text5 dist/default/production\Proyecto_2_1.X.production.o
 _initUART 1EE2 0 CODE 0 text8 dist/default/production\Proyecto_2_1.X.production.o
@@ -719,8 +719,8 @@ __end_ofi1_LEDpos F04 0 CODE 0 text23 dist/default/production\Proyecto_2_1.X.pro
 __end_of___awdiv B20 0 CODE 0 text13 dist/default/production\Proyecto_2_1.X.production.o
 _writepos BF0 0 CODE 0 text10 dist/default/production\Proyecto_2_1.X.production.o
 _adafruitrec 4C 0 CODE 0 text9 dist/default/production\Proyecto_2_1.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.o
-___stacklo 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.o
+___stackhi 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
+___stacklo 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
 hightime@tdelay 76 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto_2_1.X.production.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 _LEDmod F52 0 CODE 0 text21 dist/default/production\Proyecto_2_1.X.production.o
@@ -739,7 +739,7 @@ _TMR2IF 61 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 _TMR2ON 92 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 mapeo@inmax 33 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
 mapeo@inmin 31 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.o
+___int_sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
 convint@decenas 26 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
 mapeo@valor 2F 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
@@ -802,7 +802,7 @@ __end_of_setupINTOSC BF0 0 CODE 0 text5 dist/default/production\Proyecto_2_1.X.p
 __end_of_isr 798 0 CODE 0 text22 dist/default/production\Proyecto_2_1.X.production.o
 __end_of_lecturanum 1F42 0 CODE 0 text14 dist/default/production\Proyecto_2_1.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Pablo\AppData\Local\Temp\xcAs7a0.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _lecpos 888 0 CODE 0 text15 dist/default/production\Proyecto_2_1.X.production.o
 _RCSTAbits 18 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
