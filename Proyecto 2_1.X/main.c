@@ -40,6 +40,7 @@
 #include "oscilador.h"
 #include "setupADC.h"
 #include "setupPWM.h"
+#include "setupUART.h"
 
 #define _XTAL_FREQ 1000000
 #define valTMR0 100
@@ -49,6 +50,14 @@ void setup(void);
 void setupTMR0(void);
 void hightime(int tdelay);
 void setup_portb(void);
+void writepos(void);
+void lecpos(void);
+void adafruitrec(void);
+void LEDpos(void);
+void LEDmod(void);
+void lecturanum(void);
+int chartoint(char num);
+int convint(char centenas, char decenas, char unidades);
 void write_EEPROM(uint8_t address, uint8_t data);
 unsigned int mapeo(int valor, int inmin, int inmax, int outmin, int outmax);
 uint8_t read_EEPROM(uint8_t address);
@@ -63,6 +72,10 @@ int cont;
 int modo;
 int pos;
 int B4Flag;
+char dec;
+char cent;
+char uni;
+
 
 void __interrupt() isr (void){
     if (INTCONbits.T0IF){
@@ -80,12 +93,13 @@ void __interrupt() isr (void){
         if (PORTBbits.RB7 == 0)     // Si hay revisa si se presionó RB6
         {
             while(PORTBbits.RB7 == 0);
-            if (modo < 1){
+            if (modo < 2){
                 modo = modo + 1;
             }
             else {
                 modo = 0;
             }
+            LEDmod();
         }
         if(PORTBbits.RB6 == 0){
             while(PORTBbits.RB6 == 0);
@@ -95,6 +109,7 @@ void __interrupt() isr (void){
             else {
                 pos = 1;
             }
+            LEDpos();
         }
         if(PORTBbits.RB5 == 0){
             while(PORTBbits.RB5 == 0);
@@ -104,6 +119,7 @@ void __interrupt() isr (void){
             else {
                 pos = 4;
             }
+            LEDpos();
         }
         if(PORTBbits.RB4 == 0){
             while(PORTBbits.RB4 == 0);
@@ -119,49 +135,28 @@ void main(void) {
     setupPWM();
     setupTMR0();
     setup_portb();
+    initUART();
     pos = 1;
     B4Flag = 0;
+    PORTDbits.RD0 = 1; // Solo desde el inicio indica que la posición es 1
     while(1){
-        if(modo == 0){
+        if (PIR1bits.RCIF == 1){
+            adafruitrec();                
+        }
+        if(modo != 1){
             modomanual();  
-            PORTD = pos;
             if (B4Flag == 1){
                 B4Flag = 0;
-                int addr;
-                if (pos == 1){
-                    addr = 0;}
-                else if (pos == 2){
-                    addr = 4;}
-                else if (pos == 3){
-                    addr = 8;}
-                else if (pos == 4){
-                    addr = 12;}
-                write_EEPROM(addr, v1PWM);
-                write_EEPROM((addr + 1), v2PWM);
-                write_EEPROM((addr + 2), HIGHpulse0);
-                write_EEPROM((addr + 3), HIGHpulse1);
+                writepos();
             }
             __delay_ms(1);
         }
         else if (modo == 1){
             if (B4Flag == 1){
                 B4Flag = 0;
-                int addr;
-                if (pos == 1){
-                    addr = 0;}
-                else if (pos == 2){
-                    addr = 4;}
-                else if (pos == 3){
-                    addr = 8;}
-                else if (pos == 4){
-                    addr = 12;}
-                v1PWM = read_EEPROM(addr);
-                v2PWM = read_EEPROM((addr+1));
-                HIGHpulse0 = read_EEPROM((addr+2));
-                HIGHpulse1 = read_EEPROM((addr+3));                
+                lecpos();              
             }
             modomanual();
-            PORTD = pos;
             __delay_ms(1);
         }
         
@@ -233,6 +228,203 @@ uint8_t read_EEPROM(uint8_t address){
     return EEDAT;
 }
 
+void writepos(void){
+    int addr;
+    if (pos == 1){
+        addr = 0;}
+    else if (pos == 2){
+        addr = 4;}
+    else if (pos == 3){
+        addr = 8;}
+    else if (pos == 4){
+        addr = 12;}
+    write_EEPROM(addr, v1PWM);
+    write_EEPROM((addr + 1), v2PWM);
+    write_EEPROM((addr + 2), HIGHpulse0);
+    write_EEPROM((addr + 3), HIGHpulse1);
+}
+
+void lecpos(void){
+    int addr;
+    if (pos == 1){
+        addr = 0;}
+    else if (pos == 2){
+        addr = 4;}
+    else if (pos == 3){
+        addr = 8;}
+    else if (pos == 4){
+        addr = 12;}
+    v1PWM = read_EEPROM(addr);
+    v2PWM = read_EEPROM((addr+1));
+    HIGHpulse0 = read_EEPROM((addr+2));
+    HIGHpulse1 = read_EEPROM((addr+3));  
+}
+
+void lecturanum(void){
+    PIR1bits.RCIF  = 0;
+    while(!RCIF);
+    cent = RCREG;
+    PIR1bits.RCIF  = 0;
+    while(!RCIF);
+    dec = RCREG;
+    PIR1bits.RCIF  = 0;
+    while(!RCIF);
+    uni = RCREG;
+    PIR1bits.RCIF  = 0; 
+}
+
+void adafruitrec(void){
+    switch (RCREG){
+        case 'a':
+            PIR1bits.RCIF  = 0;
+            while(!RCIF);
+            if (RCREG == '1'){
+                PIR1bits.RCIF  = 0;
+                if (modo < 2){
+                    modo = modo + 1;
+                }
+                else {
+                    modo = 0;
+                }
+                LEDmod();
+            }
+            break;
+        case 'b':
+            PIR1bits.RCIF  = 0;
+            while(!RCIF);
+            if (RCREG == '1' & modo != 1){
+                writepos();
+            }  
+            else if (RCREG == '1' & modo == 1){
+                lecpos();
+            }
+            break;
+        case 'c':
+            PIR1bits.RCIF  = 0;
+            while(!RCIF);
+            if (RCREG == '1'){
+                pos = 1;
+            }
+            else if(RCREG == '2'){
+                pos = 2;
+            }
+            else if(RCREG == '3'){
+                pos = 3;
+            }           
+            else if(RCREG == '4'){
+                pos = 4;
+            }
+            LEDpos();
+            PIR1bits.RCIF  = 0;  
+            break;
+            
+        case 'd':
+            if (modo == 2){
+                lecturanum();
+                v1PWM = convint(cent, dec, uni);
+                v1PWM = mapeo(v1PWM, 0, 180, 63, 125);
+            }
+            break;
+        case 'e':
+            if (modo == 2){
+                lecturanum();
+                v2PWM = convint(cent, dec, uni);
+                v2PWM = mapeo(v2PWM, 0, 180, 63, 125);
+            }
+            break;
+        case 'f':
+            if (modo == 2){
+                lecturanum();
+                HIGHpulse0 = convint(cent, dec, uni);
+                HIGHpulse0 = mapeo(HIGHpulse0, 0, 180, 9, 26);
+            }
+            break;
+        case 'g':
+            if (modo == 2){
+                lecturanum();
+                HIGHpulse1 = convint(cent, dec, uni);
+                HIGHpulse1 = mapeo(HIGHpulse1, 0, 180, 9, 20);
+            }
+            break;
+        default:
+            PIR1bits.RCIF = 0;
+    }
+}
+
+void LEDpos(void){
+    switch (pos){
+        case 1: 
+            PORTD = (PORTD & 0xF0) | 0x01;
+            break;
+        case 2:
+            PORTD = (PORTD & 0xF0) | 0x02;
+            break;
+        case 3:
+            PORTD = (PORTD & 0xF0) | 0x04;
+            break;
+        case 4:
+            PORTD = (PORTD & 0xF0) | 0x08;
+            break;
+
+    }
+}
+void LEDmod(void){
+    switch (modo){
+        case 0: 
+            PORTD = (PORTD & 0x0F) | 0x10;
+            break;
+        case 1:
+            PORTD = (PORTD & 0x0F) | 0x20;
+            break;
+        case 2:
+            PORTD = (PORTD & 0x0F) | 0x40;
+            break;
+            
+    }
+}
+
+int convint(char centenas, char decenas, char unidades){
+    int u;
+    int d;
+    int c;
+    u = chartoint(unidades);
+    d = chartoint(decenas);
+    c = chartoint(centenas);
+    return ((c*100)+(d*10)+u); 
+}
+
+int chartoint(char num){
+    if (num == '0'){
+        return 0;
+    }
+    else if(num == '1'){
+        return 1;
+    }
+    else if(num == '2'){
+        return 2;
+    }
+    else if(num == '3'){
+        return 3;
+    }
+    else if(num == '4'){
+        return 4;
+    }
+    else if(num == '5'){
+        return 5;
+    }
+    else if(num == '6'){
+        return 6;
+    }
+    else if(num == '7'){
+        return 7;
+    }
+    else if(num == '8'){
+        return 8;
+    }
+    else if(num == '9'){
+        return 9;
+    }
+}
 void modomanual(void){
     //PWM con módulo CCP
     // Iniciar la conversión ADC
@@ -283,7 +475,7 @@ void modomanual(void){
     while (ADCON0bits.GO == 1); // Revisa si ya terminó la conversión ADC
     ADIF = 0; 
     if (modo == 0){
-        HIGHpulse0 = mapeo(ADRESH, 0, 255, 9, 27);
+        HIGHpulse0 = mapeo(ADRESH, 0, 255, 9, 26);
     }
     
      // Cambia a canal analógico 3
@@ -293,7 +485,7 @@ void modomanual(void){
     while (ADCON0bits.GO == 1); // Revisa si ya terminó la conversión ADC
     ADIF = 0; 
     if (modo == 0){
-        HIGHpulse1 = mapeo(ADRESH, 0, 255, 9, 22);
+        HIGHpulse1 = mapeo(ADRESH, 0, 255, 9, 20);
     }    
     __delay_ms(50);
 }
