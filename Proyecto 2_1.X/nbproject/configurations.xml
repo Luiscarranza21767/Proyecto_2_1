@@ -8,6 +8,8 @@
       <itemPath>setupADC.h</itemPath>
       <itemPath>setupPWM.h</itemPath>
       <itemPath>setupUART.h</itemPath>
+      <itemPath>OpNum.h</itemPath>
+      <itemPath>ReadWrite.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -21,6 +23,8 @@
       <itemPath>setupADC.c</itemPath>
       <itemPath>setupPWM.c</itemPath>
       <itemPath>setupUART.c</itemPath>
+      <itemPath>OpNum.c</itemPath>
+      <itemPath>ReadWrite.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

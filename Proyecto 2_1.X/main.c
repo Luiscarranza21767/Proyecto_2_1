@@ -33,35 +33,42 @@
 #pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits 
 //(Write protection off)
 
-// #pragma config statements should precede project file includes.
-// Use project enums instead of #define for ON and OFF.
 
-#include <xc.h>
+//******************************************************************************
+// Librerías
+//******************************************************************************
+#include <xc.h> // include processor files - each processor file is guarded.  
+#include <stdint.h>
 #include "oscilador.h"
 #include "setupADC.h"
 #include "setupPWM.h"
 #include "setupUART.h"
+#include "OpNum.h"
+#include "ReadWrite.h"
 
+//******************************************************************************
+// Declaración de constantes
+//******************************************************************************
 #define _XTAL_FREQ 1000000
 #define valTMR0 100
 #define PR2PWM 254
-void modomanual(void);
+//******************************************************************************
+// Prototipos de funciones
+//******************************************************************************
+void controlservos(void);
 void setup(void);
 void setupTMR0(void);
 void hightime(int tdelay);
 void setup_portb(void);
-void writepos(void);
-void lecpos(void);
 void adafruitrec(void);
 void LEDpos(void);
 void LEDmod(void);
+void writepos(void);
+void lecpos(void);
 void lecturanum(void);
-int chartoint(char num);
-int convint(char centenas, char decenas, char unidades);
-void write_EEPROM(uint8_t address, uint8_t data);
-unsigned int mapeo(int valor, int inmin, int inmax, int outmin, int outmax);
-uint8_t read_EEPROM(uint8_t address);
-
+//******************************************************************************
+// Declaración de variables
+//******************************************************************************
 unsigned int v1PWM;
 unsigned int v2PWM;
 unsigned int vPWMl;
@@ -76,7 +83,9 @@ char dec;
 char cent;
 char uni;
 
-
+//******************************************************************************
+// Función de interrupciones
+//******************************************************************************
 void __interrupt() isr (void){
     if (INTCONbits.T0IF){
         INTCONbits.T0IF = 0;
@@ -128,6 +137,9 @@ void __interrupt() isr (void){
         INTCONbits.RBIF = 0;  
     }   
 }
+//******************************************************************************
+// Función principal
+//******************************************************************************
 void main(void) {
     setup();
     setupINTOSC(4);     // Oscilador a 1 MHz
@@ -144,7 +156,7 @@ void main(void) {
             adafruitrec();                
         }
         if(modo != 1){
-            modomanual();  
+            controlservos();  
             if (B4Flag == 1){
                 B4Flag = 0;
                 writepos();
@@ -156,13 +168,15 @@ void main(void) {
                 B4Flag = 0;
                 lecpos();              
             }
-            modomanual();
+            controlservos();
             __delay_ms(1);
         }
         
     }
 }
-
+//******************************************************************************
+// Función de configuración inicial de puertos
+//******************************************************************************
 void setup(void){
     ANSELH = 0;
     TRISB = 0;
@@ -171,7 +185,9 @@ void setup(void){
     PORTC = 0;
     PORTD = 0;
 }
-
+//******************************************************************************
+// Función para configuración del puerto B
+//******************************************************************************
 void setup_portb(void){
     TRISB = 0b11110000;
     INTCONbits.RBIE = 1;    // Habilita interrupción del puerto B
@@ -180,7 +196,9 @@ void setup_portb(void){
     WPUB = 0b11110000;      // Habilita el Weak Pull-Up en el puerto B
     OPTION_REGbits.nRBPU = 0;   // Deshabilita el bit de RBPU
 }
-
+//******************************************************************************
+// Función para configuración de TMR0
+//******************************************************************************
 void setupTMR0(void){
     INTCONbits.GIE = 1;         // Habilitar interrupciones globales
     INTCONbits.T0IE = 1;        // Habilitar interrupción de TMR0
@@ -192,87 +210,17 @@ void setupTMR0(void){
     TMR0 = valTMR0;                   // Valor inicial del TMR0
     cont = 0;
 }
-
-unsigned int mapeo(int valor, int inmin, int inmax, int outmin,int outmax){
-    unsigned int resultado;
-    resultado = (((outmax-outmin)*(valor-inmin)/(inmax)) + outmin);
-    return resultado;
-}
-
+//******************************************************************************
+// Función para realizar delay variable
+//******************************************************************************
 void hightime(int tdelay){
     while (tdelay > 0){
         tdelay = tdelay - 1;
     } 
 }
-
-void write_EEPROM(uint8_t address, uint8_t data){
-    while(WR);
-    EEADR = address;
-    EEDAT = data;
-    EECON1bits.EEPGD = 0;
-    EECON1bits.WREN = 1;
-    INTCONbits.GIE = 0;
-    EECON2 = 0x55;
-    EECON2 = 0xAA;
-    EECON1bits.WR = 1;
-    EECON1bits.WREN = 0;
-    
-    INTCONbits.GIE = 1;
-}
-
-uint8_t read_EEPROM(uint8_t address){
-    while(WR || RD);
-    EEADR = address;
-    EECON1bits.EEPGD = 0;
-    EECON1bits.RD = 1;
-    return EEDAT;
-}
-
-void writepos(void){
-    int addr;
-    if (pos == 1){
-        addr = 0;}
-    else if (pos == 2){
-        addr = 4;}
-    else if (pos == 3){
-        addr = 8;}
-    else if (pos == 4){
-        addr = 12;}
-    write_EEPROM(addr, v1PWM);
-    write_EEPROM((addr + 1), v2PWM);
-    write_EEPROM((addr + 2), HIGHpulse0);
-    write_EEPROM((addr + 3), HIGHpulse1);
-}
-
-void lecpos(void){
-    int addr;
-    if (pos == 1){
-        addr = 0;}
-    else if (pos == 2){
-        addr = 4;}
-    else if (pos == 3){
-        addr = 8;}
-    else if (pos == 4){
-        addr = 12;}
-    v1PWM = read_EEPROM(addr);
-    v2PWM = read_EEPROM((addr+1));
-    HIGHpulse0 = read_EEPROM((addr+2));
-    HIGHpulse1 = read_EEPROM((addr+3));  
-}
-
-void lecturanum(void){
-    PIR1bits.RCIF  = 0;
-    while(!RCIF);
-    cent = RCREG;
-    PIR1bits.RCIF  = 0;
-    while(!RCIF);
-    dec = RCREG;
-    PIR1bits.RCIF  = 0;
-    while(!RCIF);
-    uni = RCREG;
-    PIR1bits.RCIF  = 0; 
-}
-
+//******************************************************************************
+// Función para conectar con Adafruit
+//******************************************************************************
 void adafruitrec(void){
     switch (RCREG){
         case 'a':
@@ -350,7 +298,9 @@ void adafruitrec(void){
             PIR1bits.RCIF = 0;
     }
 }
-
+//******************************************************************************
+// Funciones para indicadores de posición y modo
+//******************************************************************************
 void LEDpos(void){
     switch (pos){
         case 1: 
@@ -382,50 +332,58 @@ void LEDmod(void){
             
     }
 }
-
-int convint(char centenas, char decenas, char unidades){
-    int u;
-    int d;
-    int c;
-    u = chartoint(unidades);
-    d = chartoint(decenas);
-    c = chartoint(centenas);
-    return ((c*100)+(d*10)+u); 
+//******************************************************************************
+// Funciones para lectura y escritura según la posición
+//******************************************************************************
+void writepos(void){
+    int addr;
+    if (pos == 1){
+        addr = 0;}
+    else if (pos == 2){
+        addr = 4;}
+    else if (pos == 3){
+        addr = 8;}
+    else if (pos == 4){
+        addr = 12;}
+    write_EEPROM(addr, v1PWM);
+    write_EEPROM((addr + 1), v2PWM);
+    write_EEPROM((addr + 2), HIGHpulse0);
+    write_EEPROM((addr + 3), HIGHpulse1);
 }
-
-int chartoint(char num){
-    if (num == '0'){
-        return 0;
-    }
-    else if(num == '1'){
-        return 1;
-    }
-    else if(num == '2'){
-        return 2;
-    }
-    else if(num == '3'){
-        return 3;
-    }
-    else if(num == '4'){
-        return 4;
-    }
-    else if(num == '5'){
-        return 5;
-    }
-    else if(num == '6'){
-        return 6;
-    }
-    else if(num == '7'){
-        return 7;
-    }
-    else if(num == '8'){
-        return 8;
-    }
-    else if(num == '9'){
-        return 9;
-    }
+void lecpos(void){
+    int addr;
+    if (pos == 1){
+        addr = 0;}
+    else if (pos == 2){
+        addr = 4;}
+    else if (pos == 3){
+        addr = 8;}
+    else if (pos == 4){
+        addr = 12;}
+    v1PWM = read_EEPROM(addr);
+    v2PWM = read_EEPROM((addr+1));
+    HIGHpulse0 = read_EEPROM((addr+2));
+    HIGHpulse1 = read_EEPROM((addr+3));  
 }
-void modomanual(void){
+//******************************************************************************
+// Función para reconocer el número (caracteres) que devuelve Adafruit
+//******************************************************************************
+void lecturanum(void){
+    PIR1bits.RCIF  = 0;
+    while(!RCIF);
+    cent = RCREG;
+    PIR1bits.RCIF  = 0;
+    while(!RCIF);
+    dec = RCREG;
+    PIR1bits.RCIF  = 0;
+    while(!RCIF);
+    uni = RCREG;
+    PIR1bits.RCIF  = 0; 
+}
+//******************************************************************************
+// Control de servomotores independiente del modo
+//******************************************************************************
+void controlservos(void){
     //PWM con módulo CCP
     // Iniciar la conversión ADC
     ADCON0bits.CHS = 0b0000;

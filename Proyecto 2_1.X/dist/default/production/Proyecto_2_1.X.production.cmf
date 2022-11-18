@@ -20,8 +20,8 @@ text3 CODE 0 F48 F48 12 2 1
 text4 CODE 0 FDE FDE 22 2 1
 text5 CODE 0 590 590 68 2 1
 text6 CODE 0 F3A F3A E 2 1
-text7 CODE 0 1CC 1CC 146 2 1
-text8 CODE 0 F71 F71 17 2 1
+text7 CODE 0 F71 F71 17 2 1
+text8 CODE 0 1CC 1CC 146 2 1
 text9 CODE 0 26 26 1A6 2 1
 text10 CODE 0 5F8 5F8 61 2 1
 text11 CODE 0 FBC FBC 22 2 1
@@ -47,7 +47,7 @@ bssBANK0 BANK0 1 3F 3F 11 1 1
 clrtext CODE 0 7F7 7F7 8 2 1
 bssCOMMON COMMON 1 70 70 6 1 1
 config CONFIG 4 2007 2007 2 2 1
-$C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
+$C:\Users\Pablo\AppData\Local\Temp\xcAsd34.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 10 10 3 2 1
@@ -101,139 +101,139 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Proyecto_2_1.X.production.o
-13 cinit CODE >1186:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-13 cinit CODE >1189:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-13 cinit CODE >1254:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-14 cinit CODE >1255:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-15 cinit CODE >1256:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-16 cinit CODE >1257:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-17 cinit CODE >1258:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-18 cinit CODE >1259:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-19 cinit CODE >1262:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-1A cinit CODE >1263:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-1B cinit CODE >1264:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-1C cinit CODE >1265:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-1D cinit CODE >1266:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-22 cinit CODE >1272:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-22 cinit CODE >1274:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-23 cinit CODE >1275:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-4 intentry CODE >80:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F5A text25 CODE >202:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F5A text25 CODE >203:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F5B text25 CODE >204:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F5F text25 CODE >204:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F63 text25 CODE >203:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F68 text25 CODE >203:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F6C text25 CODE >203:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F70 text25 CODE >206:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7D0 text24 CODE >371:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7D0 text24 CODE >372:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7D1 text24 CODE >374:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7D7 text24 CODE >375:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7D8 text24 CODE >377:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7DE text24 CODE >378:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7DF text24 CODE >380:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7E5 text24 CODE >381:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7E6 text24 CODE >383:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7E8 text24 CODE >383:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7ED text24 CODE >383:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7F0 text24 CODE >383:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7F3 text24 CODE >383:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7F6 text24 CODE >384:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-751 text23 CODE >354:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-751 text23 CODE >355:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-752 text23 CODE >357:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-758 text23 CODE >358:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-759 text23 CODE >360:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-75F text23 CODE >361:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-760 text23 CODE >363:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-766 text23 CODE >364:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-767 text23 CODE >366:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-76D text23 CODE >367:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-76E text23 CODE >369:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-770 text23 CODE >369:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-775 text23 CODE >369:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-778 text23 CODE >369:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-77B text23 CODE >369:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-77E text23 CODE >369:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-781 text23 CODE >370:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-312 text22 CODE >80:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-312 text22 CODE >81:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-316 text22 CODE >82:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-317 text22 CODE >83:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-31B text22 CODE >84:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-31C text22 CODE >85:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-325 text22 CODE >86:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-328 text22 CODE >87:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-329 text22 CODE >88:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-332 text22 CODE >89:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-335 text22 CODE >92:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-339 text22 CODE >93:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-33F text22 CODE >95:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-343 text22 CODE >96:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-348 text22 CODE >96:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-34C text22 CODE >96:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-350 text22 CODE >97:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-354 text22 CODE >97:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-358 text22 CODE >98:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-359 text22 CODE >100:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-35B text22 CODE >102:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-360 text22 CODE >104:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-366 text22 CODE >105:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-36A text22 CODE >106:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-36F text22 CODE >106:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-373 text22 CODE >106:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-377 text22 CODE >107:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-37B text22 CODE >107:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-37F text22 CODE >108:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-380 text22 CODE >110:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-384 text22 CODE >112:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-389 text22 CODE >114:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-38F text22 CODE >115:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-393 text22 CODE >116:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-398 text22 CODE >116:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-39C text22 CODE >116:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3A0 text22 CODE >117:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3A4 text22 CODE >117:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3A8 text22 CODE >118:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3A9 text22 CODE >120:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3AD text22 CODE >122:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3B2 text22 CODE >124:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3B8 text22 CODE >125:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3BC text22 CODE >126:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3C0 text22 CODE >128:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3C1 text22 CODE >130:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7A9 text21 CODE >371:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7A9 text21 CODE >372:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7AA text21 CODE >374:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7B0 text21 CODE >375:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7B1 text21 CODE >377:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7B7 text21 CODE >378:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7B8 text21 CODE >380:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7BE text21 CODE >381:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7BF text21 CODE >383:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7C1 text21 CODE >383:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7C6 text21 CODE >383:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7C9 text21 CODE >383:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7CC text21 CODE >383:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7CF text21 CODE >384:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-720 text20 CODE >354:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-720 text20 CODE >355:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-721 text20 CODE >357:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-727 text20 CODE >358:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-728 text20 CODE >360:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-72E text20 CODE >361:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-72F text20 CODE >363:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-735 text20 CODE >364:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-736 text20 CODE >366:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-73C text20 CODE >367:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-73D text20 CODE >369:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-73F text20 CODE >369:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-744 text20 CODE >369:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-747 text20 CODE >369:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-74A text20 CODE >369:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-74D text20 CODE >369:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-750 text20 CODE >370:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+13 cinit CODE >1498:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+13 cinit CODE >1501:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+13 cinit CODE >1566:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+14 cinit CODE >1567:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+15 cinit CODE >1568:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+16 cinit CODE >1569:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+17 cinit CODE >1570:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+18 cinit CODE >1571:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+19 cinit CODE >1574:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+1A cinit CODE >1575:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+1B cinit CODE >1576:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+1C cinit CODE >1577:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+1D cinit CODE >1578:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+22 cinit CODE >1584:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+22 cinit CODE >1586:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+23 cinit CODE >1587:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+4 intentry CODE >89:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F5A text25 CODE >216:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F5A text25 CODE >217:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F5B text25 CODE >218:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F5F text25 CODE >218:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F63 text25 CODE >217:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F68 text25 CODE >217:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F6C text25 CODE >217:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F70 text25 CODE >220:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7D0 text24 CODE >321:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7D0 text24 CODE >322:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7D1 text24 CODE >324:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7D7 text24 CODE >325:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7D8 text24 CODE >327:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7DE text24 CODE >328:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7DF text24 CODE >330:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7E5 text24 CODE >331:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7E6 text24 CODE >333:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7E8 text24 CODE >333:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7ED text24 CODE >333:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7F0 text24 CODE >333:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7F3 text24 CODE >333:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7F6 text24 CODE >334:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+751 text23 CODE >304:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+751 text23 CODE >305:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+752 text23 CODE >307:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+758 text23 CODE >308:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+759 text23 CODE >310:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+75F text23 CODE >311:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+760 text23 CODE >313:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+766 text23 CODE >314:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+767 text23 CODE >316:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+76D text23 CODE >317:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+76E text23 CODE >319:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+770 text23 CODE >319:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+775 text23 CODE >319:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+778 text23 CODE >319:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+77B text23 CODE >319:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+77E text23 CODE >319:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+781 text23 CODE >320:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+312 text22 CODE >89:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+312 text22 CODE >90:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+316 text22 CODE >91:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+317 text22 CODE >92:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+31B text22 CODE >93:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+31C text22 CODE >94:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+325 text22 CODE >95:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+328 text22 CODE >96:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+329 text22 CODE >97:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+332 text22 CODE >98:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+335 text22 CODE >101:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+339 text22 CODE >102:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+33F text22 CODE >104:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+343 text22 CODE >105:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+348 text22 CODE >105:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+34C text22 CODE >105:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+350 text22 CODE >106:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+354 text22 CODE >106:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+358 text22 CODE >107:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+359 text22 CODE >109:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+35B text22 CODE >111:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+360 text22 CODE >113:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+366 text22 CODE >114:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+36A text22 CODE >115:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+36F text22 CODE >115:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+373 text22 CODE >115:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+377 text22 CODE >116:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+37B text22 CODE >116:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+37F text22 CODE >117:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+380 text22 CODE >119:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+384 text22 CODE >121:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+389 text22 CODE >123:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+38F text22 CODE >124:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+393 text22 CODE >125:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+398 text22 CODE >125:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+39C text22 CODE >125:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3A0 text22 CODE >126:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3A4 text22 CODE >126:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3A8 text22 CODE >127:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3A9 text22 CODE >129:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3AD text22 CODE >131:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3B2 text22 CODE >133:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3B8 text22 CODE >134:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3BC text22 CODE >135:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3C0 text22 CODE >137:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3C1 text22 CODE >139:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7A9 text21 CODE >321:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7A9 text21 CODE >322:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7AA text21 CODE >324:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7B0 text21 CODE >325:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7B1 text21 CODE >327:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7B7 text21 CODE >328:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7B8 text21 CODE >330:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7BE text21 CODE >331:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7BF text21 CODE >333:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7C1 text21 CODE >333:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7C6 text21 CODE >333:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7C9 text21 CODE >333:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7CC text21 CODE >333:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7CF text21 CODE >334:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+720 text20 CODE >304:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+720 text20 CODE >305:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+721 text20 CODE >307:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+727 text20 CODE >308:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+728 text20 CODE >310:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+72E text20 CODE >311:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+72F text20 CODE >313:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+735 text20 CODE >314:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+736 text20 CODE >316:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+73C text20 CODE >317:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+73D text20 CODE >319:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+73F text20 CODE >319:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+744 text20 CODE >319:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+747 text20 CODE >319:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+74A text20 CODE >319:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+74D text20 CODE >319:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+750 text20 CODE >320:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
 782 text19 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
 782 text19 CODE >43:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
 786 text19 CODE >45:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
@@ -248,70 +248,70 @@ F70 text25 CODE >206:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\mai
 79E text19 CODE >49:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
 7A4 text19 CODE >52:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
 7A8 text19 CODE >53:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
-4B7 text18 CODE >396:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4BA text18 CODE >397:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4C0 text18 CODE >398:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4C3 text18 CODE >400:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4C9 text18 CODE >401:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4CE text18 CODE >403:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4D4 text18 CODE >404:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4D9 text18 CODE >406:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4DF text18 CODE >407:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4E4 text18 CODE >409:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4EA text18 CODE >410:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4EF text18 CODE >412:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4F5 text18 CODE >413:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4FA text18 CODE >415:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-500 text18 CODE >416:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-505 text18 CODE >418:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-50B text18 CODE >419:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-510 text18 CODE >421:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-516 text18 CODE >422:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-51B text18 CODE >424:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-521 text18 CODE >425:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-526 text18 CODE >426:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-526 text18 CODE >427:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-659 text17 CODE >386:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-65C text17 CODE >390:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-668 text17 CODE >391:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-674 text17 CODE >392:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-680 text17 CODE >393:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-6A6 text17 CODE >393:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-6AE text17 CODE >393:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-6B2 text17 CODE >394:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FA1 text16 CODE >223:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FA4 text16 CODE >224:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FAE text16 CODE >225:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FB4 text16 CODE >226:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FB7 text16 CODE >227:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FB8 text16 CODE >228:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FBB text16 CODE >229:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-444 text15 CODE >247:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-444 text15 CODE >249:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-44A text15 CODE >250:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-44F text15 CODE >251:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-456 text15 CODE >252:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-45D text15 CODE >253:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-464 text15 CODE >254:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-46B text15 CODE >255:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-472 text15 CODE >256:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-479 text15 CODE >257:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-489 text15 CODE >258:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-498 text15 CODE >259:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4A7 text15 CODE >260:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4B6 text15 CODE >261:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F88 text14 CODE >263:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F88 text14 CODE >264:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F8B text14 CODE >265:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F8F text14 CODE >266:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F91 text14 CODE >267:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F92 text14 CODE >268:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F96 text14 CODE >269:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F98 text14 CODE >270:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F99 text14 CODE >271:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F9D text14 CODE >272:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F9F text14 CODE >273:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FA0 text14 CODE >274:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+4B7 text18 CODE >11:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+4BA text18 CODE >12:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+4C0 text18 CODE >13:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+4C3 text18 CODE >15:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+4C9 text18 CODE >16:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+4CE text18 CODE >18:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+4D4 text18 CODE >19:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+4D9 text18 CODE >21:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+4DF text18 CODE >22:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+4E4 text18 CODE >24:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+4EA text18 CODE >25:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+4EF text18 CODE >27:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+4F5 text18 CODE >28:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+4FA text18 CODE >30:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+500 text18 CODE >31:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+505 text18 CODE >33:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+50B text18 CODE >34:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+510 text18 CODE >36:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+516 text18 CODE >37:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+51B text18 CODE >39:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+521 text18 CODE >40:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+526 text18 CODE >41:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+526 text18 CODE >42:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+659 text17 CODE >44:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+65C text17 CODE >48:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+668 text17 CODE >49:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+674 text17 CODE >50:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+680 text17 CODE >51:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+6A6 text17 CODE >51:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+6AE text17 CODE >51:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+6B2 text17 CODE >52:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+FA1 text16 CODE >25:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FA4 text16 CODE >26:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FAE text16 CODE >27:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FB4 text16 CODE >28:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FB7 text16 CODE >29:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FB8 text16 CODE >30:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FBB text16 CODE >31:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+444 text15 CODE >353:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+444 text15 CODE >355:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+44A text15 CODE >356:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+44F text15 CODE >357:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+456 text15 CODE >358:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+45D text15 CODE >359:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+464 text15 CODE >360:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+46B text15 CODE >361:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+472 text15 CODE >362:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+479 text15 CODE >363:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+489 text15 CODE >364:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+498 text15 CODE >365:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+4A7 text15 CODE >366:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+4B6 text15 CODE >367:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F88 text14 CODE >371:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F88 text14 CODE >372:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F8B text14 CODE >373:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F8F text14 CODE >374:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F91 text14 CODE >375:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F92 text14 CODE >376:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F96 text14 CODE >377:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F98 text14 CODE >378:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F99 text14 CODE >379:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F9D text14 CODE >380:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F9F text14 CODE >381:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+FA0 text14 CODE >382:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
 527 text13 CODE >5:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
 527 text13 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
 52A text13 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
@@ -349,173 +349,173 @@ FA0 text14 CODE >274:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\mai
 589 text13 CODE >39:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
 58B text13 CODE >40:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
 58F text13 CODE >41:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
-6EB text12 CODE >196:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-6EB text12 CODE >198:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-6F5 text12 CODE >198:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-6FD text12 CODE >198:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-717 text12 CODE >198:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-71B text12 CODE >199:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-71F text12 CODE >200:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FBC text11 CODE >208:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FBF text11 CODE >209:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FC5 text11 CODE >210:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FCB text11 CODE >211:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FD1 text11 CODE >212:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FD4 text11 CODE >213:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FD5 text11 CODE >214:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FD6 text11 CODE >215:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FD8 text11 CODE >216:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FDA text11 CODE >217:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FDB text11 CODE >218:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FDC text11 CODE >220:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FDD text11 CODE >221:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-5F8 text10 CODE >231:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-5F8 text10 CODE >233:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-5FE text10 CODE >234:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-603 text10 CODE >235:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-60A text10 CODE >236:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-611 text10 CODE >237:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-618 text10 CODE >238:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-61F text10 CODE >239:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-626 text10 CODE >240:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-62D text10 CODE >241:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-637 text10 CODE >242:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-642 text10 CODE >243:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-64D text10 CODE >244:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-658 text10 CODE >245:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-26 text9 CODE >276:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-26 text9 CODE >277:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-27 text9 CODE >278:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-27 text9 CODE >279:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-28 text9 CODE >280:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-2C text9 CODE >281:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-32 text9 CODE >282:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-33 text9 CODE >283:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-38 text9 CODE >283:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3C text9 CODE >283:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-40 text9 CODE >284:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-44 text9 CODE >284:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-48 text9 CODE >285:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-49 text9 CODE >287:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-4B text9 CODE >289:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-51 text9 CODE >292:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-51 text9 CODE >293:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-52 text9 CODE >294:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-56 text9 CODE >295:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-62 text9 CODE >296:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-67 text9 CODE >297:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-68 text9 CODE >298:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-74 text9 CODE >299:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7A text9 CODE >302:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7A text9 CODE >303:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7B text9 CODE >304:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7F text9 CODE >305:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-85 text9 CODE >306:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-89 text9 CODE >307:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-8A text9 CODE >308:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-90 text9 CODE >309:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-94 text9 CODE >310:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-95 text9 CODE >311:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-9B text9 CODE >312:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-9F text9 CODE >313:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-A0 text9 CODE >314:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-A6 text9 CODE >315:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-AB text9 CODE >316:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-AB text9 CODE >317:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-B0 text9 CODE >318:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-B3 text9 CODE >319:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-B4 text9 CODE >322:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-BB text9 CODE >323:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-C0 text9 CODE >324:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-D2 text9 CODE >325:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F1 text9 CODE >329:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F8 text9 CODE >330:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-FD text9 CODE >331:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-10F text9 CODE >332:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-12E text9 CODE >336:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-135 text9 CODE >337:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-13A text9 CODE >338:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-14C text9 CODE >339:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-16B text9 CODE >343:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-172 text9 CODE >344:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-177 text9 CODE >345:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-189 text9 CODE >346:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1A8 text9 CODE >349:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1A8 text9 CODE >350:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1A9 text9 CODE >351:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1B1 text9 CODE >351:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1B6 text9 CODE >351:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1B9 text9 CODE >351:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1BC text9 CODE >351:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1BF text9 CODE >351:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1C2 text9 CODE >351:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1C5 text9 CODE >351:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1C8 text9 CODE >351:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1CB text9 CODE >352:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F71 text8 CODE >9:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
-F71 text8 CODE >11:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
-F75 text8 CODE >12:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
-F76 text8 CODE >13:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
-F79 text8 CODE >14:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
-F7C text8 CODE >16:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
-F7D text8 CODE >17:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
-F80 text8 CODE >19:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
-F83 text8 CODE >20:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
-F86 text8 CODE >22:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
-F87 text8 CODE >23:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
-1CC text7 CODE >428:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1CC text7 CODE >431:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1D0 text7 CODE >432:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1D7 text7 CODE >433:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1DA text7 CODE >434:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1DE text7 CODE >435:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1DF text7 CODE >438:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-1E5 text7 CODE >439:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-206 text7 CODE >442:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-20C text7 CODE >444:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-210 text7 CODE >444:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-213 text7 CODE >444:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-21C text7 CODE >446:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-224 text7 CODE >448:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-226 text7 CODE >451:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-22A text7 CODE >452:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-231 text7 CODE >453:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-234 text7 CODE >454:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-238 text7 CODE >455:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-239 text7 CODE >457:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-23F text7 CODE >458:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-260 text7 CODE >461:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-266 text7 CODE >463:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-26A text7 CODE >463:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-26D text7 CODE >463:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-276 text7 CODE >465:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-27F text7 CODE >466:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-283 text7 CODE >466:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-290 text7 CODE >468:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-292 text7 CODE >472:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-296 text7 CODE >473:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-29D text7 CODE >474:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-2A0 text7 CODE >475:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-2A4 text7 CODE >476:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-2A5 text7 CODE >477:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-2AB text7 CODE >478:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-2CC text7 CODE >482:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-2D0 text7 CODE >483:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-2D7 text7 CODE >484:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-2DA text7 CODE >485:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-2DE text7 CODE >486:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-2DF text7 CODE >487:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-2E5 text7 CODE >488:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-306 text7 CODE >490:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-311 text7 CODE >491:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F3A text6 CODE >166:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F3A text6 CODE >167:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F3D text6 CODE >168:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F40 text6 CODE >169:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F42 text6 CODE >170:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F43 text6 CODE >171:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F46 text6 CODE >172:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F47 text6 CODE >173:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+6EB text12 CODE >54:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+6EB text12 CODE >56:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+6F5 text12 CODE >56:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+6FD text12 CODE >56:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+717 text12 CODE >56:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+71B text12 CODE >57:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+71F text12 CODE >58:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+FBC text11 CODE >10:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FBF text11 CODE >11:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FC5 text11 CODE >12:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FCB text11 CODE >13:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FD1 text11 CODE >14:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FD4 text11 CODE >15:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FD5 text11 CODE >16:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FD6 text11 CODE >17:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FD8 text11 CODE >18:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FDA text11 CODE >19:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FDB text11 CODE >20:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FDC text11 CODE >22:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+FDD text11 CODE >23:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
+5F8 text10 CODE >338:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+5F8 text10 CODE >340:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+5FE text10 CODE >341:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+603 text10 CODE >342:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+60A text10 CODE >343:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+611 text10 CODE >344:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+618 text10 CODE >345:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+61F text10 CODE >346:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+626 text10 CODE >347:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+62D text10 CODE >348:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+637 text10 CODE >349:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+642 text10 CODE >350:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+64D text10 CODE >351:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+658 text10 CODE >352:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+26 text9 CODE >224:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+26 text9 CODE >225:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+27 text9 CODE >226:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+27 text9 CODE >227:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+28 text9 CODE >228:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+2C text9 CODE >229:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+32 text9 CODE >230:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+33 text9 CODE >231:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+38 text9 CODE >231:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3C text9 CODE >231:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+40 text9 CODE >232:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+44 text9 CODE >232:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+48 text9 CODE >233:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+49 text9 CODE >235:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+4B text9 CODE >237:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+51 text9 CODE >240:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+51 text9 CODE >241:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+52 text9 CODE >242:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+56 text9 CODE >243:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+62 text9 CODE >244:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+67 text9 CODE >245:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+68 text9 CODE >246:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+74 text9 CODE >247:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7A text9 CODE >250:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7A text9 CODE >251:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7B text9 CODE >252:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7F text9 CODE >253:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+85 text9 CODE >254:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+89 text9 CODE >255:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+8A text9 CODE >256:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+90 text9 CODE >257:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+94 text9 CODE >258:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+95 text9 CODE >259:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+9B text9 CODE >260:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+9F text9 CODE >261:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+A0 text9 CODE >262:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+A6 text9 CODE >263:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+AB text9 CODE >264:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+AB text9 CODE >265:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+B0 text9 CODE >266:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+B3 text9 CODE >267:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+B4 text9 CODE >270:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+BB text9 CODE >271:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+C0 text9 CODE >272:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+D2 text9 CODE >273:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F1 text9 CODE >277:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F8 text9 CODE >278:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+FD text9 CODE >279:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+10F text9 CODE >280:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+12E text9 CODE >284:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+135 text9 CODE >285:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+13A text9 CODE >286:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+14C text9 CODE >287:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+16B text9 CODE >291:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+172 text9 CODE >292:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+177 text9 CODE >293:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+189 text9 CODE >294:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1A8 text9 CODE >297:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1A8 text9 CODE >298:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1A9 text9 CODE >299:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1B1 text9 CODE >299:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1B6 text9 CODE >299:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1B9 text9 CODE >299:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1BC text9 CODE >299:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1BF text9 CODE >299:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1C2 text9 CODE >299:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1C5 text9 CODE >299:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1C8 text9 CODE >299:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1CB text9 CODE >300:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1CC text8 CODE >386:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1CC text8 CODE >389:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1D0 text8 CODE >390:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1D7 text8 CODE >391:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1DA text8 CODE >392:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1DE text8 CODE >393:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1DF text8 CODE >396:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+1E5 text8 CODE >397:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+206 text8 CODE >400:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+20C text8 CODE >402:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+210 text8 CODE >402:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+213 text8 CODE >402:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+21C text8 CODE >404:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+224 text8 CODE >406:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+226 text8 CODE >409:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+22A text8 CODE >410:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+231 text8 CODE >411:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+234 text8 CODE >412:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+238 text8 CODE >413:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+239 text8 CODE >415:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+23F text8 CODE >416:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+260 text8 CODE >419:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+266 text8 CODE >421:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+26A text8 CODE >421:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+26D text8 CODE >421:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+276 text8 CODE >423:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+27F text8 CODE >424:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+283 text8 CODE >424:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+290 text8 CODE >426:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+292 text8 CODE >430:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+296 text8 CODE >431:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+29D text8 CODE >432:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+2A0 text8 CODE >433:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+2A4 text8 CODE >434:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+2A5 text8 CODE >435:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+2AB text8 CODE >436:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+2CC text8 CODE >440:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+2D0 text8 CODE >441:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+2D7 text8 CODE >442:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+2DA text8 CODE >443:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+2DE text8 CODE >444:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+2DF text8 CODE >445:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+2E5 text8 CODE >446:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+306 text8 CODE >448:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+311 text8 CODE >449:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F71 text7 CODE >9:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
+F71 text7 CODE >11:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
+F75 text7 CODE >12:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
+F76 text7 CODE >13:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
+F79 text7 CODE >14:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
+F7C text7 CODE >16:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
+F7D text7 CODE >17:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
+F80 text7 CODE >19:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
+F83 text7 CODE >20:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
+F86 text7 CODE >22:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
+F87 text7 CODE >23:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
+F3A text6 CODE >180:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F3A text6 CODE >181:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F3D text6 CODE >182:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F40 text6 CODE >183:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F42 text6 CODE >184:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F43 text6 CODE >185:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F46 text6 CODE >186:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F47 text6 CODE >187:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
 590 text5 CODE >10:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\oscilador.c
 593 text5 CODE >11:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\oscilador.c
 599 text5 CODE >12:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\oscilador.c
@@ -557,16 +557,16 @@ FF7 text4 CODE >25:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setup
 FF8 text4 CODE >26:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupPWM.c
 FFC text4 CODE >27:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupPWM.c
 FFF text4 CODE >28:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupPWM.c
-F48 text3 CODE >184:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F48 text3 CODE >185:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F49 text3 CODE >186:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F4A text3 CODE >187:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F4B text3 CODE >189:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F4E text3 CODE >190:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F4F text3 CODE >191:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F53 text3 CODE >192:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F57 text3 CODE >193:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F59 text3 CODE >194:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F48 text3 CODE >202:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F48 text3 CODE >203:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F49 text3 CODE >204:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F4A text3 CODE >205:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F4B text3 CODE >207:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F4E text3 CODE >208:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F4F text3 CODE >209:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F53 text3 CODE >210:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F57 text3 CODE >211:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F59 text3 CODE >212:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
 6B3 text2 CODE >11:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupADC.c
 6B3 text2 CODE >12:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupADC.c
 6B6 text2 CODE >13:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupADC.c
@@ -588,49 +588,49 @@ F59 text3 CODE >194:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main
 6E0 text2 CODE >36:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupADC.c
 6E3 text2 CODE >37:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupADC.c
 6EA text2 CODE >38:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupADC.c
-F2E text1 CODE >175:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F2E text1 CODE >176:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F32 text1 CODE >177:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F33 text1 CODE >178:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F34 text1 CODE >179:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F36 text1 CODE >180:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F38 text1 CODE >181:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-F39 text1 CODE >182:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3CC maintext CODE >131:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3CC maintext CODE >132:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3D1 maintext CODE >133:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3D7 maintext CODE >134:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3DC maintext CODE >135:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3E1 maintext CODE >136:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3E6 maintext CODE >137:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3EB maintext CODE >138:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3F0 maintext CODE >139:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3F4 maintext CODE >140:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3F8 maintext CODE >141:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3F9 maintext CODE >143:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-3FF maintext CODE >144:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-404 maintext CODE >146:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-40A maintext CODE >147:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-40F maintext CODE >148:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-417 maintext CODE >149:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-419 maintext CODE >150:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-41E maintext CODE >152:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-425 maintext CODE >153:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-426 maintext CODE >154:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-42C maintext CODE >155:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-434 maintext CODE >156:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-436 maintext CODE >157:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-43B maintext CODE >159:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
-7F7 clrtext CODE >1241:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-7F7 clrtext CODE >1242:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-7F8 clrtext CODE >1243:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-7F8 clrtext CODE >1244:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-7F9 clrtext CODE >1245:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-7FA clrtext CODE >1246:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-7FB clrtext CODE >1247:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-7FC clrtext CODE >1248:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-7FD clrtext CODE >1249:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
-7FE clrtext CODE >1250:C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.s
+F2E text1 CODE >191:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F2E text1 CODE >192:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F32 text1 CODE >193:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F33 text1 CODE >194:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F34 text1 CODE >195:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F36 text1 CODE >196:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F38 text1 CODE >197:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+F39 text1 CODE >198:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3CC maintext CODE >143:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3CC maintext CODE >144:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3D1 maintext CODE >145:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3D7 maintext CODE >146:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3DC maintext CODE >147:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3E1 maintext CODE >148:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3E6 maintext CODE >149:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3EB maintext CODE >150:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3F0 maintext CODE >151:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3F4 maintext CODE >152:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3F8 maintext CODE >153:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3F9 maintext CODE >155:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+3FF maintext CODE >156:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+404 maintext CODE >158:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+40A maintext CODE >159:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+40F maintext CODE >160:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+417 maintext CODE >161:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+419 maintext CODE >162:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+41E maintext CODE >164:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+425 maintext CODE >165:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+426 maintext CODE >166:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+42C maintext CODE >167:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+434 maintext CODE >168:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+436 maintext CODE >169:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+43B maintext CODE >171:D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+7F7 clrtext CODE >1553:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+7F7 clrtext CODE >1554:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+7F8 clrtext CODE >1555:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+7F8 clrtext CODE >1556:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+7F9 clrtext CODE >1557:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+7FA clrtext CODE >1558:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+7FB clrtext CODE >1559:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+7FC clrtext CODE >1560:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+7FD clrtext CODE >1561:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
+7FE clrtext CODE >1562:C:\Users\Pablo\AppData\Local\Temp\xcAsd34.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -663,28 +663,28 @@ _IOCB 96 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 _RCIF 65 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 _WPUB 95 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
+___sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAsd34.o
 _cent 4E 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_2_1.X.production.o
 _cont 41 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_2_1.X.production.o
 _main 798 0 CODE 0 maintext dist/default/production\Proyecto_2_1.X.production.o
 _modo 72 0 COMMON 1 bssCOMMON dist/default/production\Proyecto_2_1.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
-start 20 0 CODE 0 init C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
+start 20 0 CODE 0 init C:\Users\Pablo\AppData\Local\Temp\xcAsd34.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 ?___wmul 20 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 ?_convint 26 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 _read_EEPROM 1F42 0 CODE 0 text16 dist/default/production\Proyecto_2_1.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsd34.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsd34.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsd34.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsd34.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsd34.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsd34.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _setupINTOSC B20 0 CODE 0 text5 dist/default/production\Proyecto_2_1.X.production.o
-_initUART 1EE2 0 CODE 0 text8 dist/default/production\Proyecto_2_1.X.production.o
+_initUART 1EE2 0 CODE 0 text7 dist/default/production\Proyecto_2_1.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -694,7 +694,7 @@ ___awdiv@sign 2C 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.pr
 __Hclrtext 0 0 ABS 0 clrtext -
 __end_of_setupTMR0 1EB4 0 CODE 0 text3 dist/default/production\Proyecto_2_1.X.production.o
 __end_of_setup_ADC DD6 0 CODE 0 text2 dist/default/production\Proyecto_2_1.X.production.o
-__end_of_initUART 1F10 0 CODE 0 text8 dist/default/production\Proyecto_2_1.X.production.o
+__end_of_initUART 1F10 0 CODE 0 text7 dist/default/production\Proyecto_2_1.X.production.o
 mapeo@outmax 37 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
 mapeo@outmin 35 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
 ___wmul@multiplicand 22 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
@@ -712,6 +712,7 @@ i1_LEDpos EA2 0 CODE 0 text23 dist/default/production\Proyecto_2_1.X.production.
 _setupTMR0 1E90 0 CODE 0 text3 dist/default/production\Proyecto_2_1.X.production.o
 _setup_ADC D66 0 CODE 0 text2 dist/default/production\Proyecto_2_1.X.production.o
 _EECON2 18D 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
+__end_of_controlservos 624 0 CODE 0 text8 dist/default/production\Proyecto_2_1.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 ___awdiv@divisor 26 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
 __end_ofi1_LEDmod FEE 0 CODE 0 text24 dist/default/production\Proyecto_2_1.X.production.o
@@ -719,15 +720,14 @@ __end_ofi1_LEDpos F04 0 CODE 0 text23 dist/default/production\Proyecto_2_1.X.pro
 __end_of___awdiv B20 0 CODE 0 text13 dist/default/production\Proyecto_2_1.X.production.o
 _writepos BF0 0 CODE 0 text10 dist/default/production\Proyecto_2_1.X.production.o
 _adafruitrec 4C 0 CODE 0 text9 dist/default/production\Proyecto_2_1.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
-___stacklo 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
+___stackhi 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAsd34.o
+___stacklo 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAsd34.o
 hightime@tdelay 76 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto_2_1.X.production.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 _LEDmod F52 0 CODE 0 text21 dist/default/production\Proyecto_2_1.X.production.o
 _LEDpos E40 0 CODE 0 text20 dist/default/production\Proyecto_2_1.X.production.o
 __end_of_writepos CB2 0 CODE 0 text10 dist/default/production\Proyecto_2_1.X.production.o
 start_initialization 26 0 CODE 0 cinit dist/default/production\Proyecto_2_1.X.production.o
-_modomanual 398 0 CODE 0 text7 dist/default/production\Proyecto_2_1.X.production.o
 _TRISAbits 85 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 __end_of_lecpos 96E 0 CODE 0 text15 dist/default/production\Proyecto_2_1.X.production.o
@@ -739,7 +739,7 @@ _TMR2IF 61 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 _TMR2ON 92 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 mapeo@inmax 33 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
 mapeo@inmin 31 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
+___int_sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAsd34.o
 convint@decenas 26 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
 mapeo@valor 2F 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_2_1.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
@@ -762,7 +762,6 @@ __Lbank3 0 0 ABS 0 bank3 -
 __Lcinit 26 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 5 idloc -
 __Lstack 0 0 STACK 2 stack -
-__end_of_modomanual 624 0 CODE 0 text7 dist/default/production\Proyecto_2_1.X.production.o
 _PORTAbits 5 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 _PORTBbits 6 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 _PORTCbits 7 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
@@ -802,7 +801,7 @@ __end_of_setupINTOSC BF0 0 CODE 0 text5 dist/default/production\Proyecto_2_1.X.p
 __end_of_isr 798 0 CODE 0 text22 dist/default/production\Proyecto_2_1.X.production.o
 __end_of_lecturanum 1F42 0 CODE 0 text14 dist/default/production\Proyecto_2_1.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Pablo\AppData\Local\Temp\xcAs5t0.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Pablo\AppData\Local\Temp\xcAsd34.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _lecpos 888 0 CODE 0 text15 dist/default/production\Proyecto_2_1.X.production.o
 _RCSTAbits 18 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
@@ -865,8 +864,8 @@ __ptext3 1E90 0 CODE 0 text3 dist/default/production\Proyecto_2_1.X.production.o
 __ptext4 1FBC 0 CODE 0 text4 dist/default/production\Proyecto_2_1.X.production.o
 __ptext5 B20 0 CODE 0 text5 dist/default/production\Proyecto_2_1.X.production.o
 __ptext6 1E74 0 CODE 0 text6 dist/default/production\Proyecto_2_1.X.production.o
-__ptext7 398 0 CODE 0 text7 dist/default/production\Proyecto_2_1.X.production.o
-__ptext8 1EE2 0 CODE 0 text8 dist/default/production\Proyecto_2_1.X.production.o
+__ptext7 1EE2 0 CODE 0 text7 dist/default/production\Proyecto_2_1.X.production.o
+__ptext8 398 0 CODE 0 text8 dist/default/production\Proyecto_2_1.X.production.o
 __ptext9 4C 0 CODE 0 text9 dist/default/production\Proyecto_2_1.X.production.o
 __end_of_setupPWM 2000 0 CODE 0 text4 dist/default/production\Proyecto_2_1.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
@@ -907,6 +906,7 @@ _vPWMl 47 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_2_1.X.production.o
 _CCP1CON 17 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 _CCP2CON 1D 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\Proyecto_2_1.X.production.o
+_controlservos 398 0 CODE 0 text8 dist/default/production\Proyecto_2_1.X.production.o
 __initialization 26 0 CODE 0 cinit dist/default/production\Proyecto_2_1.X.production.o
 __pbssBANK0 3F 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_2_1.X.production.o
 _T2CONbits 12 0 ABS 0 - dist/default/production\Proyecto_2_1.X.production.o
@@ -945,7 +945,7 @@ text1 0 F2E 1E5C C 2
 text3 0 F48 1E90 12 2
 text4 0 FDE 1FBC 22 2
 text6 0 F3A 1E74 E 2
-text8 0 F71 1EE2 17 2
+text7 0 F71 1EE2 17 2
 text11 0 FBC 1F78 22 2
 text14 0 F88 1F10 19 2
 text16 0 FA1 1F42 1B 2

@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c oscilador.c setupADC.c setupPWM.c setupUART.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c oscilador.c setupADC.c setupPWM.c setupUART.c OpNum.c ReadWrite.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/oscilador.p1 ${OBJECTDIR}/setupADC.p1 ${OBJECTDIR}/setupPWM.p1 ${OBJECTDIR}/setupUART.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/oscilador.p1.d ${OBJECTDIR}/setupADC.p1.d ${OBJECTDIR}/setupPWM.p1.d ${OBJECTDIR}/setupUART.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/oscilador.p1 ${OBJECTDIR}/setupADC.p1 ${OBJECTDIR}/setupPWM.p1 ${OBJECTDIR}/setupUART.p1 ${OBJECTDIR}/OpNum.p1 ${OBJECTDIR}/ReadWrite.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/oscilador.p1.d ${OBJECTDIR}/setupADC.p1.d ${OBJECTDIR}/setupPWM.p1.d ${OBJECTDIR}/setupUART.p1.d ${OBJECTDIR}/OpNum.p1.d ${OBJECTDIR}/ReadWrite.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/oscilador.p1 ${OBJECTDIR}/setupADC.p1 ${OBJECTDIR}/setupPWM.p1 ${OBJECTDIR}/setupUART.p1
+OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/oscilador.p1 ${OBJECTDIR}/setupADC.p1 ${OBJECTDIR}/setupPWM.p1 ${OBJECTDIR}/setupUART.p1 ${OBJECTDIR}/OpNum.p1 ${OBJECTDIR}/ReadWrite.p1
 
 # Source Files
-SOURCEFILES=main.c oscilador.c setupADC.c setupPWM.c setupUART.c
+SOURCEFILES=main.c oscilador.c setupADC.c setupPWM.c setupUART.c OpNum.c ReadWrite.c
 
 
 
@@ -134,6 +134,22 @@ ${OBJECTDIR}/setupUART.p1: setupUART.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/setupUART.d ${OBJECTDIR}/setupUART.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/setupUART.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/OpNum.p1: OpNum.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/OpNum.p1.d 
+	@${RM} ${OBJECTDIR}/OpNum.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/OpNum.p1 OpNum.c 
+	@-${MV} ${OBJECTDIR}/OpNum.d ${OBJECTDIR}/OpNum.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/OpNum.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/ReadWrite.p1: ReadWrite.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ReadWrite.p1.d 
+	@${RM} ${OBJECTDIR}/ReadWrite.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/ReadWrite.p1 ReadWrite.c 
+	@-${MV} ${OBJECTDIR}/ReadWrite.d ${OBJECTDIR}/ReadWrite.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/ReadWrite.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -174,6 +190,22 @@ ${OBJECTDIR}/setupUART.p1: setupUART.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/setupUART.p1 setupUART.c 
 	@-${MV} ${OBJECTDIR}/setupUART.d ${OBJECTDIR}/setupUART.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/setupUART.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/OpNum.p1: OpNum.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/OpNum.p1.d 
+	@${RM} ${OBJECTDIR}/OpNum.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/OpNum.p1 OpNum.c 
+	@-${MV} ${OBJECTDIR}/OpNum.d ${OBJECTDIR}/OpNum.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/OpNum.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/ReadWrite.p1: ReadWrite.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ReadWrite.p1.d 
+	@${RM} ${OBJECTDIR}/ReadWrite.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/ReadWrite.p1 ReadWrite.c 
+	@-${MV} ${OBJECTDIR}/ReadWrite.d ${OBJECTDIR}/ReadWrite.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/ReadWrite.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
