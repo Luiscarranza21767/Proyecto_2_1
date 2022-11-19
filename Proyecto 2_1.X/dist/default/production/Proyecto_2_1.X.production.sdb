@@ -15,39 +15,39 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"89 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+"92 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
 [v _isr isr `II(v  1 e 1 0 ]
-"143
+"146
 [v _main main `(v  1 e 1 0 ]
-"180
+"184
 [v _setup setup `(v  1 e 1 0 ]
-"191
+"194
 [v _setup_portb setup_portb `(v  1 e 1 0 ]
-"202
+"205
 [v _setupTMR0 setupTMR0 `(v  1 e 1 0 ]
-"216
+"219
 [v _hightime hightime `(v  1 e 1 0 ]
-"224
+"227
 [v _adafruitrec adafruitrec `(v  1 e 1 0 ]
-"304
+"308
 [v _LEDpos LEDpos `(v  1 e 1 0 ]
 [v i1_LEDpos LEDpos `(v  1 e 1 0 ]
-"321
+"325
 [v _LEDmod LEDmod `(v  1 e 1 0 ]
 [v i1_LEDmod LEDmod `(v  1 e 1 0 ]
-"338
+"342
 [v _writepos writepos `(v  1 e 1 0 ]
-"353
+"359
 [v _lecpos lecpos `(v  1 e 1 0 ]
-"371
+"377
 [v _lecturanum lecturanum `(v  1 e 1 0 ]
-"386
+"392
 [v _controlservos controlservos `(v  1 e 1 0 ]
 "11 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
 [v _chartoint chartoint `(i  1 e 2 0 ]
-"44
+"45
 [v _convint convint `(i  1 e 2 0 ]
-"54
+"56
 [v _mapeo mapeo `(ui  1 e 2 0 ]
 "10 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\oscilador.c
 [v _setupINTOSC setupINTOSC `(v  1 e 1 0 ]
@@ -407,43 +407,43 @@
 [v _vPWMl vPWMl `ui  1 e 2 0 ]
 "75
 [v _vPWMh vPWMh `ui  1 e 2 0 ]
-"76
-[v _HIGHpulse0 HIGHpulse0 `ui  1 e 2 0 ]
 "77
-[v _HIGHpulse1 HIGHpulse1 `ui  1 e 2 0 ]
+[v _HIGHpulse0 HIGHpulse0 `ui  1 e 2 0 ]
 "78
-[v _cont cont `i  1 e 2 0 ]
-"79
-[v _modo modo `i  1 e 2 0 ]
+[v _HIGHpulse1 HIGHpulse1 `ui  1 e 2 0 ]
 "80
-[v _pos pos `i  1 e 2 0 ]
+[v _cont cont `i  1 e 2 0 ]
 "81
-[v _B4Flag B4Flag `i  1 e 2 0 ]
+[v _modo modo `i  1 e 2 0 ]
 "82
-[v _dec dec `uc  1 e 1 0 ]
+[v _pos pos `i  1 e 2 0 ]
 "83
+[v _B4Flag B4Flag `i  1 e 2 0 ]
+"85
+[v _dec dec `uc  1 e 1 0 ]
+"86
 [v _cent cent `uc  1 e 1 0 ]
-"84
+"87
 [v _uni uni `uc  1 e 1 0 ]
-"143
+"146
 [v _main main `(v  1 e 1 0 ]
 {
-"176
+"180
 } 0
-"191
+"194
 [v _setup_portb setup_portb `(v  1 e 1 0 ]
 {
-"198
+"201
 } 0
 "11 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupADC.c
 [v _setup_ADC setup_ADC `(v  1 e 1 0 ]
 {
 "38
 } 0
-"202 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+"205 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
 [v _setupTMR0 setupTMR0 `(v  1 e 1 0 ]
 {
-"212
+"215
 } 0
 "11 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupPWM.c
 [v _setupPWM setupPWM `(v  1 e 1 0 ]
@@ -458,32 +458,32 @@
 [v setupINTOSC@IRCF IRCF `uc  1 a 1 0 ]
 "37
 } 0
-"180 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+"184 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"187
+"190
 } 0
 "9 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\setupUART.c
 [v _initUART initUART `(v  1 e 1 0 ]
 {
 "23
 } 0
-"386 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+"392 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
 [v _controlservos controlservos `(v  1 e 1 0 ]
 {
-"449
+"452
 } 0
-"224
+"227
 [v _adafruitrec adafruitrec `(v  1 e 1 0 ]
 {
-"300
+"304
 } 0
-"338
+"342
 [v _writepos writepos `(v  1 e 1 0 ]
 {
-"339
+"343
 [v writepos@addr addr `i  1 a 2 2 ]
-"352
+"358
 } 0
 "10 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
 [v _write_EEPROM write_EEPROM `(v  1 e 1 0 ]
@@ -494,18 +494,18 @@
 [v write_EEPROM@address address `uc  1 a 1 1 ]
 "23
 } 0
-"54 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+"56 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
 [v _mapeo mapeo `(ui  1 e 2 0 ]
 {
-"55
+"57
 [v mapeo@resultado resultado `ui  1 a 2 25 ]
-"54
+"56
 [v mapeo@valor valor `i  1 p 2 15 ]
 [v mapeo@inmin inmin `i  1 p 2 17 ]
 [v mapeo@inmax inmax `i  1 p 2 19 ]
 [v mapeo@outmin outmin `i  1 p 2 21 ]
 [v mapeo@outmax outmax `i  1 p 2 23 ]
-"58
+"60
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -520,17 +520,17 @@
 [v ___awdiv@dividend dividend `i  1 p 2 8 ]
 "41
 } 0
-"371 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+"377 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
 [v _lecturanum lecturanum `(v  1 e 1 0 ]
 {
-"382
+"388
 } 0
-"353
+"359
 [v _lecpos lecpos `(v  1 e 1 0 ]
 {
-"354
+"360
 [v lecpos@addr addr `i  1 a 2 3 ]
-"367
+"373
 } 0
 "25 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\ReadWrite.c
 [v _read_EEPROM read_EEPROM `(uc  1 e 1 0 ]
@@ -540,23 +540,23 @@
 [v read_EEPROM@address address `uc  1 a 1 0 ]
 "31
 } 0
-"44 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
+"45 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\OpNum.c
 [v _convint convint `(i  1 e 2 0 ]
 {
 [v convint@centenas centenas `uc  1 a 1 wreg ]
-"47
+"48
 [v convint@c c `i  1 a 2 17 ]
-"46
+"47
 [v convint@d d `i  1 a 2 15 ]
-"45
+"46
 [v convint@u u `i  1 a 2 13 ]
-"44
+"45
 [v convint@centenas centenas `uc  1 a 1 wreg ]
 [v convint@decenas decenas `uc  1 p 1 6 ]
 [v convint@unidades unidades `uc  1 p 1 7 ]
-"48
+"49
 [v convint@centenas centenas `uc  1 a 1 12 ]
-"52
+"53
 } 0
 "11
 [v _chartoint chartoint `(i  1 e 2 0 ]
@@ -576,34 +576,34 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
-"304 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
+"308 D:\Backup\Documentos\GitHub\Proyecto_2_1\Proyecto 2_1.X\main.c
 [v _LEDpos LEDpos `(v  1 e 1 0 ]
 {
-"320
+"324
 } 0
-"321
+"325
 [v _LEDmod LEDmod `(v  1 e 1 0 ]
 {
-"334
+"338
 } 0
-"89
+"92
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"139
+"142
 } 0
-"304
+"308
 [v i1_LEDpos LEDpos `(v  1 e 1 0 ]
 {
-"320
+"324
 } 0
-"321
+"325
 [v i1_LEDmod LEDmod `(v  1 e 1 0 ]
 {
-"334
+"338
 } 0
-"216
+"219
 [v _hightime hightime `(v  1 e 1 0 ]
 {
 [v hightime@tdelay tdelay `i  1 p 2 0 ]
-"220
+"223
 } 0

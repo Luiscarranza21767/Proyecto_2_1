@@ -2680,6 +2680,7 @@ int chartoint(char num){
     }
 }
 
+
 int convint(char centenas, char decenas, char unidades){
     int u;
     int d;
@@ -2689,6 +2690,7 @@ int convint(char centenas, char decenas, char unidades){
     c = chartoint(centenas);
     return ((c*100)+(d*10)+u);
 }
+
 
 unsigned int mapeo(int valor, int inmin, int inmax, int outmin,int outmax){
     unsigned int resultado;

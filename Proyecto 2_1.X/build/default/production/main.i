@@ -37,7 +37,6 @@
 
 
 
-
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2655,10 +2654,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 2 3
-# 40 "main.c" 2
+# 39 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdint.h" 1 3
-# 41 "main.c" 2
+# 40 "main.c" 2
 
 # 1 "./oscilador.h" 1
 # 14 "./oscilador.h"
@@ -2671,7 +2670,7 @@ extern __bank0 __bit __timeout;
 
 
 void setupINTOSC(uint8_t IRCF);
-# 42 "main.c" 2
+# 41 "main.c" 2
 
 # 1 "./setupADC.h" 1
 # 14 "./setupADC.h"
@@ -2684,7 +2683,7 @@ void setupINTOSC(uint8_t IRCF);
 
 
 void setup_ADC(void);
-# 43 "main.c" 2
+# 42 "main.c" 2
 
 # 1 "./setupPWM.h" 1
 # 14 "./setupPWM.h"
@@ -2697,7 +2696,7 @@ void setup_ADC(void);
 
 
 void setupPWM(void);
-# 44 "main.c" 2
+# 43 "main.c" 2
 
 # 1 "./setupUART.h" 1
 # 14 "./setupUART.h"
@@ -2710,7 +2709,7 @@ void setupPWM(void);
 
 
 void initUART(void);
-# 45 "main.c" 2
+# 44 "main.c" 2
 
 # 1 "./OpNum.h" 1
 # 12 "./OpNum.h"
@@ -2722,7 +2721,7 @@ void initUART(void);
 int chartoint(char num);
 int convint(char centenas, char decenas, char unidades);
 unsigned int mapeo(int valor, int inmin, int inmax, int outmin, int outmax);
-# 46 "main.c" 2
+# 45 "main.c" 2
 
 # 1 "./ReadWrite.h" 1
 # 12 "./ReadWrite.h"
@@ -2732,8 +2731,8 @@ unsigned int mapeo(int valor, int inmin, int inmax, int outmin, int outmax);
 
 void write_EEPROM(uint8_t address, uint8_t data);
 uint8_t read_EEPROM(uint8_t address);
-# 47 "main.c" 2
-# 58 "main.c"
+# 46 "main.c" 2
+# 57 "main.c"
 void controlservos(void);
 void setup(void);
 void setupTMR0(void);
@@ -2748,16 +2747,20 @@ void lecturanum(void);
 
 
 
+
 unsigned int v1PWM;
 unsigned int v2PWM;
 unsigned int vPWMl;
 unsigned int vPWMh;
+
 unsigned int HIGHpulse0;
 unsigned int HIGHpulse1;
+
 int cont;
 int modo;
 int pos;
 int B4Flag;
+
 char dec;
 char cent;
 char uni;
@@ -2830,6 +2833,7 @@ void main(void) {
     pos = 1;
     B4Flag = 0;
     PORTDbits.RD0 = 1;
+
     while(1){
         if (PIR1bits.RCIF == 1){
             adafruitrec();
@@ -2858,7 +2862,6 @@ void main(void) {
 
 void setup(void){
     ANSELH = 0;
-    TRISB = 0;
     TRISC = 0b10000000;
     TRISD = 0;
     PORTC = 0;
@@ -2951,6 +2954,7 @@ void adafruitrec(void){
                 v1PWM = convint(cent, dec, uni);
                 v1PWM = mapeo(v1PWM, 0, 180, 63, 125);
             }
+
             break;
         case 'e':
             if (modo == 2){
@@ -3028,6 +3032,8 @@ void writepos(void){
     write_EEPROM((addr + 1), v2PWM);
     write_EEPROM((addr + 2), HIGHpulse0);
     write_EEPROM((addr + 3), HIGHpulse1);
+
+
 }
 void lecpos(void){
     int addr;
@@ -3064,17 +3070,15 @@ void lecturanum(void){
 
 void controlservos(void){
 
-
     ADCON0bits.CHS = 0b0000;
     _delay((unsigned long)((100)*(1000000/4000000.0)));
     ADCON0bits.GO = 1;
     while (ADCON0bits.GO == 1);
     ADIF = 0;
-
-
     if (modo == 0){
         v1PWM = mapeo(ADRESH, 0, 255, 63, 125);
     }
+
 
     vPWMl = v1PWM & 0x003;
 
@@ -3090,7 +3094,6 @@ void controlservos(void){
     ADCON0bits.GO = 1;
     while (ADCON0bits.GO == 1);
     ADIF = 0;
-
     if (modo == 0){
         v2PWM = mapeo(ADRESH, 0, 255, 63, 125);
     }

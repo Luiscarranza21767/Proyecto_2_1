@@ -10,12 +10,12 @@
  Intel Hex-file ranges:
   0h - 5h		(dist/default/production\Proyecto_2_1.X.production.hex)
   8h - FFDh		(dist/default/production\Proyecto_2_1.X.production.hex)
-  1E5Ch - 1FFFh		(dist/default/production\Proyecto_2_1.X.production.hex)
+  1E5Eh - 1FFFh		(dist/default/production\Proyecto_2_1.X.production.hex)
   4000h - 4007h		(dist/default/production\Proyecto_2_1.X.production.hex)
   400Eh - 4011h		(dist/default/production\Proyecto_2_1.X.production.hex)
  Unused ranges:
   6h - 7h
-  FFEh - 1E5Bh
+  FFEh - 1E5Dh
   2000h - 3FFFh
   4008h - 400Dh
 
@@ -283,7 +283,7 @@
 00000FE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000FF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 ----------------------------------------------------------
-00001E50 | -- -- -- -- -- -- -- -- -- -- -- -- H1 H1 H1 H1
+00001E50 | -- -- -- -- -- -- -- -- -- -- -- -- -- -- H1 H1
 00001E60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001E70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001E80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

@@ -382,8 +382,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;OpNum.c: 42: }
 [e :UE 138 ]
 }
-"44
-[; ;OpNum.c: 44: int convint(char centenas, char decenas, char unidades){
+"45
+[; ;OpNum.c: 45: int convint(char centenas, char decenas, char unidades){
 [v _convint `(i ~T0 @X0 1 ef3`uc`uc`uc ]
 {
 [e :U _convint ]
@@ -391,34 +391,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _decenas `uc ~T0 @X0 1 r2 ]
 [v _unidades `uc ~T0 @X0 1 r3 ]
 [f ]
-"45
-[; ;OpNum.c: 45:     int u;
-[v _u `i ~T0 @X0 1 a ]
 "46
-[; ;OpNum.c: 46:     int d;
-[v _d `i ~T0 @X0 1 a ]
+[; ;OpNum.c: 46:     int u;
+[v _u `i ~T0 @X0 1 a ]
 "47
-[; ;OpNum.c: 47:     int c;
-[v _c `i ~T0 @X0 1 a ]
+[; ;OpNum.c: 47:     int d;
+[v _d `i ~T0 @X0 1 a ]
 "48
-[; ;OpNum.c: 48:     u = chartoint(unidades);
-[e = _u ( _chartoint (1 _unidades ]
+[; ;OpNum.c: 48:     int c;
+[v _c `i ~T0 @X0 1 a ]
 "49
-[; ;OpNum.c: 49:     d = chartoint(decenas);
-[e = _d ( _chartoint (1 _decenas ]
+[; ;OpNum.c: 49:     u = chartoint(unidades);
+[e = _u ( _chartoint (1 _unidades ]
 "50
-[; ;OpNum.c: 50:     c = chartoint(centenas);
-[e = _c ( _chartoint (1 _centenas ]
+[; ;OpNum.c: 50:     d = chartoint(decenas);
+[e = _d ( _chartoint (1 _decenas ]
 "51
-[; ;OpNum.c: 51:     return ((c*100)+(d*10)+u);
+[; ;OpNum.c: 51:     c = chartoint(centenas);
+[e = _c ( _chartoint (1 _centenas ]
+"52
+[; ;OpNum.c: 52:     return ((c*100)+(d*10)+u);
 [e ) + + * _c -> 100 `i * _d -> 10 `i _u ]
 [e $UE 158  ]
-"52
-[; ;OpNum.c: 52: }
+"53
+[; ;OpNum.c: 53: }
 [e :UE 158 ]
 }
-"54
-[; ;OpNum.c: 54: unsigned int mapeo(int valor, int inmin, int inmax, int outmin,int outmax){
+"56
+[; ;OpNum.c: 56: unsigned int mapeo(int valor, int inmin, int inmax, int outmin,int outmax){
 [v _mapeo `(ui ~T0 @X0 1 ef5`i`i`i`i`i ]
 {
 [e :U _mapeo ]
@@ -428,17 +428,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _outmin `i ~T0 @X0 1 r4 ]
 [v _outmax `i ~T0 @X0 1 r5 ]
 [f ]
-"55
-[; ;OpNum.c: 55:     unsigned int resultado;
-[v _resultado `ui ~T0 @X0 1 a ]
-"56
-[; ;OpNum.c: 56:     resultado = (((outmax-outmin)*(valor-inmin)/(inmax)) + outmin);
-[e = _resultado -> + / * - _outmax _outmin - _valor _inmin _inmax _outmin `ui ]
 "57
-[; ;OpNum.c: 57:     return resultado;
+[; ;OpNum.c: 57:     unsigned int resultado;
+[v _resultado `ui ~T0 @X0 1 a ]
+"58
+[; ;OpNum.c: 58:     resultado = (((outmax-outmin)*(valor-inmin)/(inmax)) + outmin);
+[e = _resultado -> + / * - _outmax _outmin - _valor _inmin _inmax _outmin `ui ]
+"59
+[; ;OpNum.c: 59:     return resultado;
 [e ) _resultado ]
 [e $UE 159  ]
-"58
-[; ;OpNum.c: 58: }
+"60
+[; ;OpNum.c: 60: }
 [e :UE 159 ]
 }
